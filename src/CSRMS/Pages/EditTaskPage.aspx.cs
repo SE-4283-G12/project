@@ -11,7 +11,12 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
+
+        public void UpdateReminders()
+        { }
+
+        public void UpdateTaskDetails()
+        { }
     }
 }

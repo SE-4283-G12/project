@@ -112,7 +112,7 @@
     <Content Include="Pages\AddTaskPage.aspx" />
     <Content Include="Pages\EditProfileSettingsPage.aspx" />
     <Content Include="Pages\EditTaskPage.aspx" />
-    <Content Include="Pages\HomePage.aspx" />
+    <Content Include="Pages\LandingPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Pages\ViewAllTaskPage.aspx" />
     <Content Include="Site.Master" />
@@ -122,6 +122,20 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\AccountModel\AccountBuilder.cs" />
+    <Compile Include="Models\AccountModel\AccountDirector.cs" />
+    <Compile Include="Models\AccountModel\AdministratorAccount.cs" />
+    <Compile Include="Models\AccountModel\AdministratorAccountBuilder.cs" />
+    <Compile Include="Models\AccountModel\UserAccount.cs" />
+    <Compile Include="Models\AccountModel\UserAccoutnBuilder.cs" />
+    <Compile Include="Models\EventModel\Category.cs" />
+    <Compile Include="Models\EventModel\EmailReminderImplementation.cs" />
+    <Compile Include="Models\EventModel\Reminder.cs" />
+    <Compile Include="Models\EventModel\ReminderImplementation.cs" />
+    <Compile Include="Models\EventModel\Task.cs" />
+    <Compile Include="Models\EventModel\TaskComponent.cs" />
+    <Compile Include="Models\EventModel\TaskList.cs" />
+    <Compile Include="Models\EventModel\TextMessageReminderImplementation.cs" />
     <Compile Include="Pages\AddTaskPage.aspx.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,12 +157,12 @@
     <Compile Include="Pages\EditTaskPage.aspx.designer.cs">
       <DependentUpon>EditTaskPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Pages\LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Pages\LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,7 +190,6 @@
     <Folder Include="Logs\" />
     <Folder Include="Media\Images\" />
     <Folder Include="Media\Videos\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

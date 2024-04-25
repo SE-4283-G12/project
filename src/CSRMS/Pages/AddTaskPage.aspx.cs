@@ -13,5 +13,13 @@ namespace CSRMS.Pages
         {
 
         }
+        public void defineTaskParameters()
+        { }
+
+        public void addReminder()
+        { }
+
+        public void saveTask()
+        { }
     }
 }

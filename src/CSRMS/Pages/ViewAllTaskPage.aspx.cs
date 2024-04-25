@@ -13,5 +13,14 @@ namespace CSRMS.Pages
         {
 
         }
+
+        public void setEditTaskView()
+        { }
+
+        public void searchTasks()
+        { }
+
+        public void filterTasks()
+        { }
     }
 }

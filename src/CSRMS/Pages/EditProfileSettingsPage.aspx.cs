@@ -13,5 +13,13 @@ namespace CSRMS.Pages
         {
 
         }
+        public void updateEmail()
+        { }
+
+        public void changePassword()
+        { }
+
+        public void changeUsername()
+        { }
     }
 }

@@ -13,5 +13,15 @@ namespace CSRMS
         {
 
         }
+        public void getViewAllTaskView()
+        { }
+        public void getAddTaskView()
+        { }
+        public void getEditTaskView()
+        { }
+        public void viewTodaysReminders()
+        { }
+        public void selectEventsView()
+        { }
     }
 }
