@@ -128,6 +128,10 @@
     <Compile Include="Models\AccountModel\AdministratorAccountBuilder.cs" />
     <Compile Include="Models\AccountModel\UserAccount.cs" />
     <Compile Include="Models\AccountModel\UserAccoutnBuilder.cs" />
+    <Compile Include="Models\Controllers\AccountController.cs" />
+    <Compile Include="Models\Controllers\EventsController.cs" />
+    <Compile Include="Models\Controllers\LandingController.cs" />
+    <Compile Include="Models\Controllers\LoginController.cs" />
     <Compile Include="Models\EventModel\Category.cs" />
     <Compile Include="Models\EventModel\EmailReminderImplementation.cs" />
     <Compile Include="Models\EventModel\Reminder.cs" />

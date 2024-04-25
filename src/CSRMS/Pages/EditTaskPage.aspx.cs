@@ -10,8 +10,7 @@ namespace CSRMS.Pages
     public partial class EditTaskPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-        }
+        {}
 
         public void UpdateReminders()
         { }
