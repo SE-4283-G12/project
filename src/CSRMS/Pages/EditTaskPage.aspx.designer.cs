@@ -11,7 +11,7 @@ namespace CSRMS.Pages
 {
 
 
-    public partial class TestPage
+    public partial class EditTaskPage
     {
 
         /// <summary>

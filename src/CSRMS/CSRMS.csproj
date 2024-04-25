@@ -109,9 +109,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\AddTaskPage.aspx" />
+    <Content Include="Pages\EditProfileSettingsPage.aspx" />
+    <Content Include="Pages\EditTaskPage.aspx" />
+    <Content Include="Pages\HomePage.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Pages\TestPage.aspx" />
+    <Content Include="Pages\ViewAllTaskPage.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -119,22 +122,43 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Pages\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Pages\AddTaskPage.aspx.cs">
+      <DependentUpon>AddTaskPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Pages\AddTaskPage.aspx.designer.cs">
+      <DependentUpon>AddTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditProfileSettingsPage.aspx.cs">
+      <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditProfileSettingsPage.aspx.designer.cs">
+      <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditTaskPage.aspx.cs">
+      <DependentUpon>EditTaskPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditTaskPage.aspx.designer.cs">
+      <DependentUpon>EditTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TestPage.aspx.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
+    <Compile Include="Pages\ViewAllTaskPage.aspx.cs">
+      <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\TestPage.aspx.designer.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
+    <Compile Include="Pages\ViewAllTaskPage.aspx.designer.cs">
+      <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

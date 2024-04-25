@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestPage.aspx.cs" Inherits="CSRMS.Pages.TestPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProfileSettingsPage.aspx.cs" Inherits="CSRMS.Pages.EditProfileSettingsPage" %>
 
 <!DOCTYPE html>
 
