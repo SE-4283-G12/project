@@ -12,6 +12,7 @@ namespace CSRMS.Models.AccountModel
         private string preferredName { get; set; }
         private string emailAddress { get; set; }
         private string password { get; set; }
+        private string sessionId { get; set; }
         public string getAccountIdentifier()
         {
             return accountIdentifier;
@@ -30,6 +31,11 @@ namespace CSRMS.Models.AccountModel
             return emailAddress;
         }
 
+        public string getSessionId()
+        {
+            return sessionId;
+        }
+
         public void setPreferredName(string name)
         {
             preferredName = name;
@@ -38,6 +44,11 @@ namespace CSRMS.Models.AccountModel
         public void setEmailAddress(string email)
         {
             emailAddress = email;
+        }
+
+        public void setSessionId(string id)
+        {
+            sessionId = id;
         }
 
         public bool validateCredentials()
