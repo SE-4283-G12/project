@@ -29,14 +29,14 @@
 
                     <div class="input_wrapper">
                         <asp:TextBox
-                            id="username"
-                            type="text"
-                            name="username"
-                            placeholder="User Name"
-                            title="Input User Name"
-                            CssClass="input_field"
-                            runat="server"/>
-                        <label for="username" class="input_label">User Name</label>
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            Cssclass="input_field"
+                            runat="server"
+                            />
+                        <label for="email" class="input_label">Email</label>
                     </div>
                     <div class="input_wrapper">
                         <asp:TextBox
@@ -58,7 +58,7 @@
 
                     <asp:Button type="submit" Cssclass="login-button" name="login" id="login" text="Login" OnClick="login_Click" runat="server"/>
 
-                    <asp:Button type="button" Cssclass="create-user-button" Text="Create User" onclick="createUser_Click" runat="server"/>
+                    <asp:Button type="button" Cssclass="create-user-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
 
             </div>
             <script src="../Public/Scripts/loginInput.js"></script>

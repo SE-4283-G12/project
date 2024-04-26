@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddTaskPage.aspx" />
+    <Content Include="Pages\CreateUser.aspx" />
     <Content Include="Pages\EditProfileSettingsPage.aspx" />
     <Content Include="Pages\EditTaskPage.aspx" />
     <Content Include="Pages\LandingPage.aspx" />
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="Pages\AddTaskPage.aspx.designer.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditProfileSettingsPage.aspx.cs">
       <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>

@@ -106,6 +106,14 @@ place-items: center;
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.input-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+
+
+
 .container h2{
     background: var(--clr-background-1);
     text-align: center; 
@@ -119,20 +127,14 @@ place-items: center;
 input types
 ===========
 */
-/*
-input[type=text], select, input[type=password], input[type=number], input[type=date] {
-    width: 100%;
-    padding: 12px;
-    margin: 4px 0;
-    display:flexbox; 
-    border: 1px solid #ccc;
-    box-sizing:content-box;
-}
-*/
+
+
 .input_wrapper{
     position: relative;
     padding: 15px 0 0; 
 }
+
+/*Input 1*/
 .input_field{
     outline: 1.5px solid var(--clr-border-1);
     font-size: 1rem;
@@ -184,6 +186,60 @@ label,
     transform-origin: center;
     cursor: pointer;
 }
+
+/*input 2*/
+.input_field2 {
+    outline: 1.5px solid var(--clr-border-1);
+    font-size: 1rem;
+    border-radius: 8px;
+    color: var(--clr-text-1);
+    padding: 8px;
+    width:98%;
+    border: none;
+    padding-right: 32px;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.input_field2::placeholder {
+    color: transparent;
+}
+
+.input_field2:placeholder-shown ~ .input_label {
+    font-size: 1rem;
+    cursor: text;
+    color: var(--clr-text-1);
+    top: 24px;
+}
+
+label,
+.input_field2:focus ~ .input_label {
+    position: absolute;
+    top: 6px;
+    padding: 0 4px;
+    background-color: var(--clr-background-1);
+    display: block;
+    font-size: 14px;
+    left: 8px;
+    color: var(--clr-text-1);
+    transition: 0.3s;
+}
+
+.input_field2:focus ~ .input_label {
+    color: var(--clr-accent-1);
+}
+
+.input_field:focus {
+    outline: 1.5px solid var(--clr-header-1);
+}
+/*
+ ======
+  Forms
+ ======
+*/
+
+
+
 /*
 =======
 buttons

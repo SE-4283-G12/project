@@ -7,27 +7,23 @@ using System.Web.UI.WebControls;
 
 namespace CSRMS.Pages
 {
-    public partial class LoginPage : System.Web.UI.Page
+    public partial class CreateUser : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void createUser_Click(object sender, EventArgs e)
         {
-            
-            Response.Redirect("CreateUser.aspx");
-        }
-
-        protected void login_Click(object sender, EventArgs e)
-        {
-            string email = this.email.Text; 
+            string name = this.firstname.Text +" " + this.lastname.Text; 
             string password = this.password.Text;
-            // Handle login...
-            System.Diagnostics.Debug.WriteLine(email);
-            System.Diagnostics.Debug.WriteLine(password);
+            string email = this.email.Text;
 
+
+            System.Diagnostics.Debug.WriteLine(name);
+            System.Diagnostics.Debug.WriteLine(password);
+            System.Diagnostics.Debug.WriteLine(email);
         }
+
     }
 }
