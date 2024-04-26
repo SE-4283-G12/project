@@ -116,7 +116,10 @@
     <Content Include="Global.asax" />
     <Content Include="Pages\LoginPage.aspx" />
     <Content Include="Pages\ViewAllTaskPage.aspx" />
-    <Content Include="public\styles\styles.css" />
+    <Content Include="Public\Images\eye-off.svg" />
+    <Content Include="Public\Images\eye.svg" />
+    <Content Include="Public\Scripts\loginInput.js" />
+    <Content Include="Public\Styles\styles.css" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -169,6 +172,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ViewAllTaskPage.aspx.cs">
       <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,7 +202,6 @@
     <Folder Include="Logs\" />
     <Folder Include="Media\Images\" />
     <Folder Include="Media\Videos\" />
-    <Folder Include="public\images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

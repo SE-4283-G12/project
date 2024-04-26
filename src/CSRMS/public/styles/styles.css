@@ -189,19 +189,33 @@ label,
 buttons
 =======
 */
-.login-button{
-    background-color: white;
-    color: var();
+.login-button {
+    background-color: var(--clr-accent-1);
+    color: var(--clr-background-1);
     height: 40px;
     width: 100%;
     position: relative;
     border: 2px solid var(--clr-accent-1);
     cursor: pointer;
     text-transform: uppercase;
-    transition-duration: .6; 
+    transition-duration: .6;
+    margin-bottom: 10px; 
 }
 .login-button:hover{
-    background-color:   var(--clr-accent-1);
-    color: var(--clr-background-1);
+    filter:brightness(.8); 
 }
 
+.create-user-button {
+    background-color: var(--clr-accent-2);
+    color: var(--clr-background-1);
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 2px solid var(--clr-accent-1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: .6;
+}
+    .create-user-button:hover {
+        filter: brightness(.8); 
+    }
