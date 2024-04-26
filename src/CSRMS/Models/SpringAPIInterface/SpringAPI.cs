@@ -38,6 +38,51 @@ namespace CSRMS.Models.SpringAPIInterface
 			
 		}
 		
+		public void createTask(string session_sessionId, string task_id, string task_title, string task_description, string task_priority, string task_location, string task_is_complete, string task_start_date_time, string task_due_date_time, string task_account_id, string task_category)
+		{
+			
+		}
+		
+		public void updateTask(string session_sessionId, string task_id, string task_title, string task_description, string task_priority, string task_location, string task_is_complete, string task_start_date_time, string task_due_date_time, string task_account_id, string task_category[])
+		{
+			
+		}
+		
+		public void deleteTask(string session_sessionId, string task_id)
+		{
+			
+		}
+		public void getTaskDetails(string session_sessionId, string task_id)
+		{
+			
+		}
+		public void getAllTasksOfAccount(string session_sessionId)
+		{
+			
+		}
+		
+		public void createCategory(string session_sessionId, string category_id, string category_categoryName, string category_task[])
+		{
+			
+		}
+		
+		public void updateCategory(string session_sessionId, string category_id, string category_categoryName, string category_task[])
+		{
+			
+		}
+		
+		public void deleteCategory(string session_sessionId, string category_id)
+		{
+			
+		}
+		public void getCategoryDetails(string session_sessionId, string category_id)
+		{
+			
+		}
+		public void getAllCategoriesOfAccount(string session_sessionId)
+		{
+			
+		}
 		
 
 
