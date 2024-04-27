@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CSRMS.Models.DatabaseInterface;
 
 namespace CSRMS.Pages
 {
@@ -12,6 +13,11 @@ namespace CSRMS.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void createAccount(string username, bool isAdministrator, string email, string preferedName, string phoneNumber)
+        {
+          
         }
     }
 }

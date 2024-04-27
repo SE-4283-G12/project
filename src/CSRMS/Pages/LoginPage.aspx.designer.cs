@@ -11,7 +11,7 @@ namespace CSRMS.Pages
 {
 
 
-    public partial class LandingPage
+    public partial class LoginPage
     {
     }
 }

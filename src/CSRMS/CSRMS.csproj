@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddTaskPage.aspx" />
+    <Content Include="Pages\CreateAccountPage.aspx" />
     <Content Include="Pages\EditProfileSettingsPage.aspx" />
     <Content Include="Pages\EditTaskPage.aspx" />
     <Content Include="Pages\LandingPage.aspx" />
@@ -142,12 +143,20 @@
     <Compile Include="Models\EventModel\TaskComponent.cs" />
     <Compile Include="Models\EventModel\TaskList.cs" />
     <Compile Include="Models\EventModel\TextMessageReminderImplementation.cs" />
+    <Compile Include="Models\DatabaseInterface\DatabaseInterface.cs" />
     <Compile Include="Pages\AddTaskPage.aspx.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\AddTaskPage.aspx.designer.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateAccountPage.aspx.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CreateAccountPage.aspx.designer.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditProfileSettingsPage.aspx.cs">
       <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>
@@ -172,6 +181,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ViewAllTaskPage.aspx.cs">
       <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>

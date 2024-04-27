@@ -7,48 +7,44 @@ namespace CSRMS.Models.AccountModel
 {
     public class UserAccount
     {
-        private string accountIdentifier { get; set; }
-        private bool isAdministrator { get; set; } = false;
-        private string preferredName { get; set; }
+        private string firstName { get; set; }
+        private string lastName { get; set; }
         private string emailAddress { get; set; }
         private string password { get; set; }
-        private string sessionId { get; set; }
-        public string getAccountIdentifier()
-        {
-            return accountIdentifier;
-        }
-        public bool getAdministratorStatus()
-        {
-            return isAdministrator;
-        }
-        public string getPreferredName()
-        {
-            return preferredName;
-        }
 
+        public UserAccount(string fname, string lname, string email, string pass)
+        {
+            this.firstName = fname;
+            this.lastName = lname;
+            emailAddress = email;
+            password = pass;
+        }
+        public string getFirstName()
+        {
+            return firstName;
+        }
+        public string getLastName()
+        {
+            return lastName;
+        }
         public string getEmailAddress()
         {
             return emailAddress;
         }
 
-        public string getSessionId()
+        public void setFirstName(string fname)
         {
-            return sessionId;
+            firstName = fname;
         }
 
-        public void setPreferredName(string name)
+        public void setLastName(string lname)
         {
-            preferredName = name;
+            lastName = lname;
         }
 
         public void setEmailAddress(string email)
         {
             emailAddress = email;
-        }
-
-        public void setSessionId(string id)
-        {
-            sessionId = id;
         }
 
         public bool validateCredentials()

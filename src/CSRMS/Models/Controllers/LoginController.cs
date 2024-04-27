@@ -7,10 +7,5 @@ namespace CSRMS.Models.Controllers
 {
     public class LoginController
     {
-        public void createAccountSelected()
-        { }
-
-        public void sendCredentials()
-        { }
     }
 }

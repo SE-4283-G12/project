@@ -4,14 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CSRMS.Models.SpringAPIInterface;
+using CSRMS.Models.EventModel;
+using CSRMS.Models.DatabaseInterface;
 
 namespace CSRMS
 {
     public partial class _Default : Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { }
+        {
+            // Get todays reminders
+            List<Reminder> todaysReminders = getTodaysReminders();
+        }
         public void getViewAllTaskView()
         {
             Response.Redirect("ViewAllTasksPage.aspx");
@@ -24,9 +28,12 @@ namespace CSRMS
         {
             Response.Redirect("EditProfileSettingsPage.aspx");
         }
-        public void viewTodaysReminders()
-        { }
-        public void selectEventsView()
-        { }
+        public List<Reminder> getTodaysReminders()
+        {
+            // Temp retrun value
+            return new List<Reminder>();
+        }
+        //public void selectEventsView()
+        //{ }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CSRMS.Models.DatabaseInterface;
 
 namespace CSRMS.Pages
 {
@@ -13,8 +14,10 @@ namespace CSRMS.Pages
         {
 
         }
-        public void updateEmail()
-        { }
+        public void updateEmail(string sessionId, string accountId, string firstName, string lastName, string email, string password)
+        {
+
+        }
 
         public void changePassword()
         { }
