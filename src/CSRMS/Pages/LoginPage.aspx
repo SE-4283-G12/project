@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" style="width:0px" runat="server">
    <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +19,7 @@
     </head>
     <body>
         <main>
-            <div class="container">
+            <div class="container" style="width:600px">
                 <h2>
                     <center>
                     <i class="fa-solid fa-right-to-bracket" style="color: #333333;"></i>
@@ -58,7 +58,7 @@
 
                     <asp:Button type="submit" Cssclass="login-button" name="login" id="login" text="Login" OnClick="login_Click" runat="server"/>
 
-                    <asp:Button type="button" Cssclass="create-user-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
+                    <asp:Button type="button" Cssclass="create-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
 
             </div>
             <script src="../Public/Scripts/loginInput.js"></script>

@@ -11,6 +11,10 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                string selectedValue = prioritySelector.Value; 
+            }
 
         }
         public void defineTaskParameters()
@@ -21,5 +25,10 @@ namespace CSRMS.Pages
 
         public void saveTask()
         { }
+
+        protected void createTask_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Task button clicked"); 
+        }
     }
 }

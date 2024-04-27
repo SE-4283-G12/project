@@ -28,6 +28,14 @@ namespace CSRMS.Pages
             System.Diagnostics.Debug.WriteLine(email);
             System.Diagnostics.Debug.WriteLine(password);
 
+            if(email == "" || password == "")
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alertMessage", "alert('Please ensure both fields are filled out!')", true);
+            }
+            else
+            {
+                Response.Redirect("LandingPage.aspx"); 
+            }
         }
     }
 }

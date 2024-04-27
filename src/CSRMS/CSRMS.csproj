@@ -119,7 +119,10 @@
     <Content Include="Pages\ViewAllTaskPage.aspx" />
     <Content Include="Public\Images\eye-off.svg" />
     <Content Include="Public\Images\eye.svg" />
+    <Content Include="Public\Scripts\CreateUser.js" />
     <Content Include="Public\Scripts\loginInput.js" />
+    <Content Include="Public\Scripts\NavBar.js" />
+    <Content Include="Public\Styles\LandingPage.css" />
     <Content Include="Public\Styles\styles.css" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />

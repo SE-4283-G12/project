@@ -85,14 +85,22 @@ Container
 ==========
 */
 
-main{
+main {
+    
 min-height: calc(100vh -3rem);
 display: grid;
+justify-content: center; 
 place-items: center;
+
+    /*
+    display: flex;
+    flex-direction: column;
+    */
 }
+
 .container{
-    width: 440px;
-    position: absolute;
+    width: 60%; 
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -261,7 +269,7 @@ buttons
     filter:brightness(.8); 
 }
 
-.create-user-button {
+.create-button {
     background-color: var(--clr-accent-2);
     color: var(--clr-background-1);
     height: 40px;
@@ -272,6 +280,6 @@ buttons
     text-transform: uppercase;
     transition-duration: .6;
 }
-    .create-user-button:hover {
+    .create-button:hover {
         filter: brightness(.8); 
     }

@@ -85,8 +85,9 @@
                     </div>
                     <br>
                     <br>
-                    <asp:Button type="button" Cssclass="create-user-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
+                    <asp:Button type="button" Cssclass="create-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
     </div>
+        <script src="../Public/Scripts/CreateUser.js"></script>
   </main>
 </body>
 </html>
