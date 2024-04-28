@@ -1,0 +1,207 @@
+
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+===============
+Variables
+===============
+*/
+
+:root {
+    /*WhiteSmoke - background*/
+    --clr-background-1: hsl(0, 0%, 96%);
+    /* MINT - Header/Footer Color  */
+    --clr-header-1: hsl(207, 44%, 20%); 
+    /*CHARCOL GREY - Text and Icons*/
+    --clr-text-1: hsl(0,0%,20%);
+    /*Soft Blue - selected items/active buttons elements*/
+    --clr-accent-1: hsl(204, 70%, 63%);
+    /*Subdued Green - Completed Task */
+    --clr-accent-2: hsl(146, 45%, 65%);
+    /*LIGHT GREY - Borders/dividers */
+    --clr-border-1: hsl(207, 44%, 49%);
+    /*Teal - Notifications*/
+    --clr-notifications-1: hsl(180, 100%, 25%);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 20rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+/*
+==============
+Global Styles 
+==============
+*/ 
+::after,
+::before{
+    margin: 10;
+    padding: 0;
+    box-sizing:content-box;
+}
+body{ 
+    font-family: var(--ff-secondary);
+    background: var(--clr-background-1);
+    color: var(--clr-text-1);
+    line-height: 1.5;
+    font-size: .75rem;
+}
+h1,
+h2, 
+h3,
+h4{
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+    color: var(--clr-header-1);
+}
+h1{
+    font-size: 2rem;
+}
+h2{ 
+    font-size: 1.5rem;
+}
+h3{ 
+    font-size: 1rem;
+}
+h4{
+    font-size: .75rem;
+}
+/*
+==========
+Container
+==========
+*/
+
+main{
+min-height: calc(100vh -3rem);
+display: grid;
+place-items: center;
+}
+.container{
+    width: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:left; 
+    background: var(--clr-background-1);
+    border: 2px solid var(--clr-border-1);
+    color: var(--clr-text-1);
+    padding: 4rem; 
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container h2{
+    background: var(--clr-background-1);
+    text-align: center; 
+    color: var(--clr-header-1);
+    padding: .5rem; 
+    margin-bottom: 1rem;
+}
+
+/*
+===========
+input types
+===========
+*/
+/*
+input[type=text], select, input[type=password], input[type=number], input[type=date] {
+    width: 100%;
+    padding: 12px;
+    margin: 4px 0;
+    display:flexbox; 
+    border: 1px solid #ccc;
+    box-sizing:content-box;
+}
+*/
+.input_wrapper{
+    position: relative;
+    padding: 15px 0 0; 
+}
+.input_field{
+    outline: 1.5px solid var(--clr-border-1);
+    font-size: 1rem;
+    border-radius: 8px; 
+    color: var(--clr-text-1);
+    padding: 8px; 
+    width: 100%;
+    border: none;
+    padding-right: 32px;
+    background: transparent;
+    transition: all 0.2s;
+}
+.input_field::placeholder{
+    color: transparent;
+}
+.input_field:placeholder-shown
+~.input_label{
+    font-size: 1rem;
+    cursor: text;
+    color: var(--clr-text-1);
+    top: 24px;
+}
+
+label,
+.input_field:focus~.input_label{
+    position: absolute;
+    top: 6px;
+    padding: 0 4px; 
+    background-color: var(--clr-background-1);
+    display: block;
+    font-size: 14px;
+    left: 8px;
+    color: var(--clr-text-1);
+    transition: 0.3s;
+}
+.input_field:focus~.input_label{
+    color: var(--clr-accent-1);
+}
+.input_field:focus{
+    outline: 1.5px solid var(--clr-header-1);
+}
+.input_icon{
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 28px; 
+    height: 28px;
+    transform: translate(-50%, -50%); 
+    transform-origin: center;
+    cursor: pointer;
+}
+/*
+=======
+buttons
+=======
+*/
+.login-button{
+    background-color: white;
+    color: var();
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 2px solid var(--clr-accent-1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: .6; 
+}
+.login-button:hover{
+    background-color:   var(--clr-accent-1);
+    color: var(--clr-background-1);
+}
+
