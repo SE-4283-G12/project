@@ -7,21 +7,20 @@ namespace CSRMS.Models.EventModel
 {
     public class Task : TaskComponent
     {
-        private string id { get; set; }
+        private string taskId { get; set; }
         private string title { get; set; }
         private bool isComplete { get; set; }
         private DateTime dueDateTime { get; set; }
         private DateTime startDateTime { get; set; }
-        private string email { get; set; }
         private string location { get; set; }
         private string description { get; set; }
         private int priority { get; set; }
-        private List<Category> categories { get; set; }
+        private Category category { get; set; }
         private Reminder reminder { get; set; }
 
-        public Task(string id, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string email, string location, string description, int priority, List<Category> categories, Reminder reminder)
+        public Task(string taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string email, string location, string description, int priority, Category category, Reminder reminder)
         {
-            this.id = id;
+            this.taskId = taskId;
             this.title = title;
             this.isComplete = isComplete;
             this.dueDateTime = dueDateTime;
@@ -29,10 +28,11 @@ namespace CSRMS.Models.EventModel
             this.email = email;
             this.location = location;
             this.description = description;
-            this.categories = categories;
+            this.category = category;
             this.priority = priority;
             this.reminder = reminder;
         }
+
         public string getDetails()
         {
             // Temp return value

@@ -8,18 +8,18 @@ namespace CSRMS.Models.EventModel
     public class Reminder
     {
         private ReminderImplementation implementation { get; set; }
-        private int id { get; set; }
-        private int taskId { get; set; }
+        private int reminderId { get; set; }
         private string message { get; set; }
-        private DateTime time { get; set; }
+        private int taskId { get; set; }
+        private DateTime reminderDateTime { get; set; }
 
-        public Reminder(int id, int taskId, string message, DateTime time)
+        public Reminder(int reminderId, int taskId, string message, DateTime reminderDateTime)
         {
-            this.id = id;
-            implementation = null;
-            this.taskId = taskId;
+            this.implementation = null;
+            this.reminderId = reminderId;
             this.message = message;
-            this.time = time;
+            this.taskId = taskId;
+            this.reminderDateTime = reminderDateTime;
         }
 
         public void setImplementation(ReminderImplementation implementation)
@@ -28,6 +28,7 @@ namespace CSRMS.Models.EventModel
         }
         public void notify()
         {
+            implementation.notify();
         }
     }
 }
