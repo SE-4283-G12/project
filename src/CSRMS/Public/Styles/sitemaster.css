@@ -14,7 +14,7 @@ Variables
 :root {
     /*WhiteSmoke - background*/
     --clr-background-1: hsl(0, 0%, 96%);
-    /* MINT - Header/Footer Color  */
+    /* dark blue - Header/Footer Color  */
     --clr-header-1: hsl(207, 44%, 20%);
     /*CHARCOL GREY - Text and Icons*/
     --clr-text-1: hsl(0,0%,20%);
@@ -36,7 +36,7 @@ Variables
     --max-width: 1170px;
     --fixed-width: 620px;
     --gap: 0.5rem;
-    --item-width: 5.25 rem; 
+    --item-width: 5.25 rem;
 }
 
 /*
@@ -137,6 +137,7 @@ Container
     .main-container {
         height: 100vh;
         width: 100vw;
+        background-color:white; 
     }
 
 /*

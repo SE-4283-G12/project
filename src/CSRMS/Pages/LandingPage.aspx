@@ -38,7 +38,7 @@
 			</table>
 		</div>
 
-	<script src="../Public/Scripts/tasktable.js"></script>
+	<script src="../Public/Scripts/dashboardtable.js"></script>
 
 
 	</body>

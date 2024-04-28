@@ -120,9 +120,9 @@
     <Content Include="Public\Images\eye-off.svg" />
     <Content Include="Public\Images\eye.svg" />
     <Content Include="Public\Scripts\loginInput.js" />
-    <Content Include="Public\Scripts\tasktable.js" />
-    <Content Include="Public\Styles\navbar.css" />
-    <Content Include="Public\Styles\mainstyles.css" />
+    <Content Include="Public\Scripts\dashboardtable.js" />
+    <Content Include="Public\Styles\sitemaster.css" />
+    <Content Include="Public\Styles\forms.css" />
     <Content Include="Public\Styles\table.css" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />
