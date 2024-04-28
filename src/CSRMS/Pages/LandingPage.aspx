@@ -15,21 +15,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
               rel="stylesheet">
               <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../Public/Styles/LandingPage.css">
+        <link rel="stylesheet" href="../Public/Styles/table.css">
     </head>
     <body>
-   
-        <main>
-            <article>
-                test article/content
-            </article>
-            <aside>
-                test side
-            </aside>
-            <footer>
-                footer test
-            </footer>
-        </main>
-    </body>
+		<div class="table-widget">
+			<table>
+				<caption>
+					<h1><center>Today's Task</center></h1> 
+					<span class="table-row-count"></span>
+				</caption>
+				<thead>
+					<tr>
+						<th>Task Name</th>
+						<th>Priority</th>
+						<th>Location</th>
+						<th>Category</th>
+					</tr>
+				</thead>
+				<tbody id="task-rows">
+					<!--? rows are generated -->
+				</tbody>
+			</table>
+		</div>
 
+	<script src="script.js"></script>
+
+
+	</body>
+
+	</html>
 </asp:Content>
+
+

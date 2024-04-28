@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
               rel="stylesheet">
               <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../Public/Styles/styles.css">
+        <link rel="stylesheet" href="../Public/Styles/mainstyles.css">
     </head>
     <body>
         <main>

@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
               rel="stylesheet">
               <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../Public/Styles/Styles.css">
+        <link rel="stylesheet" href="../Public/Styles/mainstyles.css">
     </head>
     <body>
         <main >
@@ -77,18 +77,6 @@
                             />
                         <label for="time" class="input_label">Time</label>
                     </div>
-                    <div class="input_wrapper">
-                        <asp:TextBox
-                            id="priority"
-                            type="time"
-                            name="time"
-                            placeholder="Time"
-                            title="The Time the task should be completed"
-                            Cssclass="input_field"
-                            runat="server"
-                            />
-                        <label for="time" class="input_label">Time</label>
-                    </div>
                 <br />
                 <div class="input-wrapper">
                     
@@ -98,6 +86,7 @@
                         <option value="Low">Low Priority</option>
                     </select>
                 </div>
+
                     <br>
                     <br>
                     <asp:Button type="button" Cssclass="create-button" Text="Create Task" onclick="createTask_Click" runat="server"/>
