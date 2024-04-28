@@ -41,35 +41,14 @@ namespace CSRMS.Pages
             errorCheck();
         }
 
-        public void sendCredentials(string username, string password)
+        public void sendCredentials(string email, string password)
         {
-            UserAccount user = DatabaseInterface.GetUserAccount(username);
-            if (user != null)
-            {
-                // Check if password is correct
-                if (user.getPassword() == password)
-                {
-                    // Redirect to Home Page
-                    // Add UserAccount to Session
-                    Session["UserAccount"] = user;
-                    Response.Redirect("LandingPage.aspx");
-                }
-                else
-                {
-                    ViewState["ErrorMessage"] = "Invalid Password"; 
-                }
-            }
-            else
-            {
-                // Display Error Message
-                ViewState["ErrorMessage"] = "Invalid Username or Password";
-
-            }
+            if(UserAccount.validateCredentials(email, password)) Response.Redirect("HomePage.aspx");
+            else ViewState["ErrorMessage"] = "Invalid Username or Password";
         }
 
         protected void createUser_Click(object sender, EventArgs e)
         {
-            
             Response.Redirect("CreateUser.aspx");
         }
 

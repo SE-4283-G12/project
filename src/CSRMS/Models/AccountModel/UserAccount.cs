@@ -60,10 +60,15 @@ namespace CSRMS.Models.AccountModel
             return password;
         }
 
-        public bool validateCredentials()
+        public static bool validateCredentials(string email, string password)
         {
-            // Temp return value
-            return true;
+            UserAccount user = DatabaseInterface.DatabaseInterface.GetUserAccount(email);
+            if (user != null && user.getPassword() == password)
+            {
+                HttpContext.Current.Session["UserAccount"] = user;
+                return true;
+            }
+            return false;
         }
 
         public void storeCredentials()
