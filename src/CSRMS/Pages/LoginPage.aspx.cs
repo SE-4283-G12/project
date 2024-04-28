@@ -54,6 +54,10 @@ namespace CSRMS.Pages
                     Session["UserAccount"] = user;
                     Response.Redirect("LandingPage.aspx");
                 }
+                else
+                {
+                    ViewState["ErrorMessage"] = "Invalid Password"; 
+                }
             }
             else
             {

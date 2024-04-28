@@ -19,6 +19,10 @@
         <link rel="stylesheet" href="../Public/Styles/table.css">
     </head>
  <body>
+	 <div class="row main-container" style="margin-left:5em">
+	 <div>
+		 <h2>search bar:</h2>
+	 </div>
 		<div class="table-widget">
 			<table>
 				<caption>
@@ -38,7 +42,7 @@
 				</tbody>
 			</table>
 		</div>
-
+	 </div>
 </body>
 </html>
 </asp:Content>
