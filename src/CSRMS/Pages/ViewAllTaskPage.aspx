@@ -55,7 +55,7 @@
 
                 <div class="input-wrapper">
 
-                    <asp:DropDownList ID="priorityDropDown" class="input_field2" runat="server">
+                    <asp:DropDownList ID="priorityDropDown" style="margin-top: 16px" class="input_field2" runat="server">
                         <asp:ListItem value="">Filter by Priority...</asp:ListItem>
                         <asp:ListItem value="High">High Priority</asp:ListItem>
                         <asp:ListItem value="Medium">Medium Priority</asp:ListItem>
