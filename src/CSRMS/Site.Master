@@ -21,7 +21,13 @@
     <main>
 
 
-    <% string address = Request.Path.ToString().ToLower();  
+   
+               
+    <form runat="server">
+        <div class="main-container">
+        <div class="row nav-bar">
+
+        <% string address = Request.Path.ToString().ToLower();  
         System.Diagnostics.Debug.WriteLine(address);
 
         if(address == "/pages/loginpage" || address == "/pages/createuser")
@@ -54,12 +60,13 @@
                 </ul>
             </header>
         <% } %>
-               
-    <form runat="server">
-       
+                  </div>
+        <div class="row main-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+        </div>
 
+        </div>
     </form>
             
    </main>

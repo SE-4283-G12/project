@@ -107,6 +107,44 @@ footer{
     grid-area: foot; 
 }
 
+
+/*
+==========
+Logan Additions
+==========
+*/
+
+/*
+==========
+Container
+==========
+*/
+
+    .row.nav-bar {
+        height: fit-content;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .row.main-content {
+        height: fit-content;
+        display: flex;
+        width: 100%;
+        margin-top: 5em;
+        justify-content: center;
+    }
+
+    .main-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+/*
+==========
+End of Logan Additions
+==========
+*/
+
 /*
     containers
 */
