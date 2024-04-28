@@ -119,14 +119,22 @@ Container
 ==========
 */
 
-main{
+main {
+    
 min-height: calc(100vh -3rem);
 display: grid;
+justify-content: center; 
 place-items: center;
+
+    /*
+    display: flex;
+    flex-direction: column;
+    */
 }
+
 .container{
-    width: 440px;
-    position: absolute;
+    width: 60%; 
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -139,6 +147,14 @@ place-items: center;
     border-radius: 30px;
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.input-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+
+
 
 .container h2{
     background: var(--clr-background-1);
@@ -153,20 +169,14 @@ place-items: center;
 input types
 ===========
 */
-/*
-input[type=text], select, input[type=password], input[type=number], input[type=date] {
-    width: 100%;
-    padding: 12px;
-    margin: 4px 0;
-    display:flexbox; 
-    border: 1px solid #ccc;
-    box-sizing:content-box;
-}
-*/
+
+
 .input_wrapper{
     position: relative;
     padding: 15px 0 0; 
 }
+
+/*Input 1*/
 .input_field{
     outline: 1.5px solid var(--clr-border-1);
     font-size: 1rem;
@@ -218,24 +228,92 @@ label,
     transform-origin: center;
     cursor: pointer;
 }
+
+/*input 2*/
+.input_field2 {
+    outline: 1.5px solid var(--clr-border-1);
+    font-size: 1rem;
+    border-radius: 8px;
+    color: var(--clr-text-1);
+    padding: 8px;
+    width:98%;
+    border: none;
+    padding-right: 32px;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.input_field2::placeholder {
+    color: transparent;
+}
+
+.input_field2:placeholder-shown ~ .input_label {
+    font-size: 1rem;
+    cursor: text;
+    color: var(--clr-text-1);
+    top: 24px;
+}
+
+label,
+.input_field2:focus ~ .input_label {
+    position: absolute;
+    top: 6px;
+    padding: 0 4px;
+    background-color: var(--clr-background-1);
+    display: block;
+    font-size: 14px;
+    left: 8px;
+    color: var(--clr-text-1);
+    transition: 0.3s;
+}
+
+.input_field2:focus ~ .input_label {
+    color: var(--clr-accent-1);
+}
+
+.input_field:focus {
+    outline: 1.5px solid var(--clr-header-1);
+}
+/*
+ ======
+  Forms
+ ======
+*/
+
+
+
 /*
 =======
 buttons
 =======
 */
-.login-button{
-    background-color: white;
-    color: var();
+.login-button {
+    background-color: var(--clr-accent-1);
+    color: var(--clr-background-1);
     height: 40px;
     width: 100%;
     position: relative;
     border: 2px solid var(--clr-accent-1);
     cursor: pointer;
     text-transform: uppercase;
-    transition-duration: .6; 
+    transition-duration: .6;
+    margin-bottom: 10px; 
 }
 .login-button:hover{
-    background-color:   var(--clr-accent-1);
-    color: var(--clr-background-1);
+    filter:brightness(.8); 
 }
 
+.create-button {
+    background-color: var(--clr-accent-2);
+    color: var(--clr-background-1);
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 2px solid var(--clr-accent-1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: .6;
+}
+    .create-button:hover {
+        filter: brightness(.8); 
+    }

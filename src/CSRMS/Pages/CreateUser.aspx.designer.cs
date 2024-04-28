@@ -11,52 +11,43 @@ namespace CSRMS.Pages
 {
 
 
-    public partial class AddTaskPage
+    public partial class CreateUser
     {
 
         /// <summary>
-        /// taskname control.
+        /// firstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox taskname;
+        protected global::System.Web.UI.WebControls.TextBox firstname;
 
         /// <summary>
-        /// location control.
+        /// lastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox location;
+        protected global::System.Web.UI.WebControls.TextBox lastname;
 
         /// <summary>
-        /// date control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox date;
+        protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// time control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time;
-
-        /// <summary>
-        /// prioritySelector control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect prioritySelector;
+        protected global::System.Web.UI.WebControls.TextBox password;
     }
 }

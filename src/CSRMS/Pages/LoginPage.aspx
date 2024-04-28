@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Login Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" style="width:0px" runat="server">
    <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,11 +16,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
               rel="stylesheet">
               <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../public/styles/styles.css">
+        <link rel="stylesheet" href="../Public/Styles/mainstyles.css">
     </head>
     <body>
         <main>
-            <div class="container">
+            <div class="container" style="width:600px">
                 <h2>
                     <center>
                     <i class="fa-solid fa-right-to-bracket" style="color: #333333;"></i>
@@ -45,24 +46,45 @@
                         <asp:TextBox
                             runat="server"
                             ID="password"
+                    <div class="input_wrapper">
+                        <asp:TextBox
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            Cssclass="input_field"
+                            runat="server"
+                            />
+                        <label for="email" class="input_label">Email</label>
+                    </div>
+                    <div class="input_wrapper">
+                        <asp:TextBox
+                            id="password"
                             type="password"
                             name="password"
                             placeholder="Your Password"
                             title="minimum 6 characters at least 1 Alphabet and 1 number"
                             class="input_field"
                         ></asp:TextBox>
+                            Cssclass="input_field"
+                            runat="server"
+                            />
                         <label for="password" class="input_label">Password</label>
                         <img
                             alt="Eye Icon" title="Eye Icon"
-                            src="eye.svg" class="input_icon"
-                        >
+                            src="../Public/Images/eye.svg" class="input_icon" />
                     </div>
-                    <br><br>
+                    <br>
+                    <br>
+
+                    <asp:Button type="submit" Cssclass="login-button" name="login" id="login" text="Login" OnClick="login_Click" runat="server"/>
+
+                    <asp:Button type="button" Cssclass="create-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
 
                     <asp:button runat="server" type="submit" class="login-button" name="submit" id="login" OnClick="loginBtnClicked" Text="Login" />
                 </form>
             </div>
-            <script src="loginInput.js"></script>
+            <script src="../Public/Scripts/loginInput.js"></script>
         </main>
     </body>
 </html>
