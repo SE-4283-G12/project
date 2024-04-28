@@ -22,7 +22,7 @@
 			<table>
 				<caption>
 					<h1><center>Today's Task</center></h1> 
-					<span class="table-row-count"></span>
+					<span class="table-row-count" id="table-row-count"></span>
 				</caption>
 				<thead>
 					<tr>
@@ -38,7 +38,7 @@
 			</table>
 		</div>
 
-	<script src="script.js"></script>
+	<script src="../Public/Scripts/tasktable.js"></script>
 
 
 	</body>

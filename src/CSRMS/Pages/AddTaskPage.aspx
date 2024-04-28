@@ -40,7 +40,7 @@
                                 title="Input Task Name"
                                 CssClass="input_field"
                                 runat="server"/>
-                            <label for="taskname" class="input_label">Task Name *</label>
+                            <label for="taskname" class="input_label">Task Name<span style="color:red"> *</span></label>
                         </div>
                         <div class="input_wrapper">
                             <asp:TextBox
@@ -62,7 +62,7 @@
                             Cssclass="input_field"
                             runat="server"
                             />
-                        <label for="date" class="input_label">Date *</label>
+                        <label for="date" class="input_label">Date<span style="color:red"> *</span></label>
 
                     </div>
                     <div class="input_wrapper">
