@@ -28,7 +28,7 @@ namespace CSRMS.Models.EventModel
         }
         public void notify()
         {
-            implementation.notify();
+            implementation.remind();
         }
     }
 }

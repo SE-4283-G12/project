@@ -18,14 +18,13 @@ namespace CSRMS.Models.EventModel
         private Category category { get; set; }
         private Reminder reminder { get; set; }
 
-        public Task(string taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string email, string location, string description, int priority, Category category, Reminder reminder)
+        public Task(string taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string location, string description, int priority, Category category, Reminder reminder)
         {
             this.taskId = taskId;
             this.title = title;
             this.isComplete = isComplete;
             this.dueDateTime = dueDateTime;
             this.startDateTime = startDateTime;
-            this.email = email;
             this.location = location;
             this.description = description;
             this.category = category;

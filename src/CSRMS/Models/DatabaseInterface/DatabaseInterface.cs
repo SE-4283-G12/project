@@ -350,14 +350,13 @@ namespace CSRMS.Models.DatabaseInterface
                                 bool isComplete = (bool)reader["is_complete"];
                                 DateTime startDate = (DateTime)reader["start_date"];
                                 DateTime dueDate = (DateTime)reader["due_date"];
-                                string email = reader["email"].ToString();
                                 string location = reader["location"].ToString();
                                 int priority = (int)reader["priority"];
                                 string description = reader["description"].ToString();
 
                                 // Create a new Task object
                                 // add category and reminder later
-                                task = new Task(Convert.ToString(retrievedTaskId), title, isComplete, dueDate, startDate,email,  location, description, priority, null, null);
+                                task = new Task(Convert.ToString(retrievedTaskId), title, isComplete, dueDate, startDate, location, description, priority, null, null);
                             }
                         }
                     }
