@@ -27,7 +27,7 @@ namespace CSRMS.Models.DatabaseInterface
                     foreach (DataRow row in schema.Rows)
                     {
                         string tableName = row["TABLE_NAME"].ToString();
-                        Debug.WriteLine("Table Name: " + tableName);
+                        //Debug.WriteLine("Table Name: " + tableName);
                     }
 
                     connection.Close();
@@ -39,10 +39,11 @@ namespace CSRMS.Models.DatabaseInterface
             }
         }
 
+        //
         // Storage Procedures
+        //
 
         // User Account Storage Procedures
-
         // Create User Account
         public static void CreateAccount(string email, string fname, string lname, string password)
         {
@@ -171,7 +172,6 @@ namespace CSRMS.Models.DatabaseInterface
         }
 
         // Category Storage Procedures
-
         // CreateCategory
         public static void CreateCategory(string name)
         {
@@ -430,6 +430,7 @@ namespace CSRMS.Models.DatabaseInterface
             }
         }
 
+        // Task Categories Storage Procedures
         // CreateTaskCategory
         public static void CreateTaskCategory(int taskId, int categoryId)
         {
@@ -522,7 +523,6 @@ namespace CSRMS.Models.DatabaseInterface
         }
 
         // Reminder Storage Procedures
-
         // CreateReminder
         public static void CreateReminder(int taskId, string message, DateTime time)
         {
