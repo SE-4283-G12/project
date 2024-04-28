@@ -81,6 +81,40 @@ h4{
 }
 /*
 ==========
+Logan Additions
+==========
+*/
+
+/*
+==========
+Labels
+==========
+*/
+
+.error_message_label {
+    color: red !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*
+==========
+Visibility Modification
+==========
+*/
+
+.hidden {
+    display: none; 
+}
+
+/*
+==========
+End of Logan Additions
+==========
+*/
+
+/*
+==========
 Container
 ==========
 */

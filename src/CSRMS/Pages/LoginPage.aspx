@@ -28,26 +28,29 @@
                 </h2>
 
                 <form name="login" method="POST" action = "login_action.aspx">
+                    <asp:Label runat="server" ID="errorMessage" CssClass="error_message_label hidden" Text="Username or Password is incorrect"></asp:Label>
                     <div class="input_wrapper">
-                        <input
-                            id="username"
+                        <asp:TextBox
+                            runat="server"
+                            ID="username"
                             type="text"
                             name="username"
                             placeholder="User Name"
                             title="Input User Name"
-                            required class="input_field"
-                        >
+                            CssClass="input_field"
+                        ></asp:TextBox>
                         <label for="username" class="input_label">User Name</label>
                     </div>
                     <div class="input_wrapper">
-                        <input
-                            id="password"
+                        <asp:TextBox
+                            runat="server"
+                            ID="password"
                             type="password"
                             name="password"
                             placeholder="Your Password"
                             title="minimum 6 characters at least 1 Alphabet and 1 number"
-                            required class="input_field"
-                        >
+                            class="input_field"
+                        ></asp:TextBox>
                         <label for="password" class="input_label">Password</label>
                         <img
                             alt="Eye Icon" title="Eye Icon"
@@ -56,7 +59,7 @@
                     </div>
                     <br><br>
 
-                    <input type="submit" class="login-button" name="submit" id="login" value="Login">
+                    <asp:button runat="server" type="submit" class="login-button" name="submit" id="login" OnClick="loginBtnClicked" Text="Login" />
                 </form>
             </div>
             <script src="loginInput.js"></script>

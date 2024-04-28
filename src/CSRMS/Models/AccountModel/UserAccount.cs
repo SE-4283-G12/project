@@ -50,6 +50,16 @@ namespace CSRMS.Models.AccountModel
             return lastName;
         }
 
+        public void setPassword(string password)
+        {
+            this.password = password;
+        }
+
+        public string getPassword()
+        {
+            return password;
+        }
+
         public bool validateCredentials()
         {
             // Temp return value

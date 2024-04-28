@@ -5,11 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using CSRMS.Models.EventModel;
-using CSRMS.Models.DatabaseInterface;
 
-namespace CSRMS
+namespace CSRMS.Pages
 {
-    public partial class _Default : Page
+    public partial class LandingPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,3 +36,6 @@ namespace CSRMS
         //{ }
     }
 }
+
+
+
