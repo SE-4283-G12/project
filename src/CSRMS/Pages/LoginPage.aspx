@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿<%@ Page Title="Login Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
-=======
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
->>>>>>> LoginPage
+
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="LoginPage.aspx.cs" Inherits="CSRMS.Pages.LoginPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" style="width:0px" runat="server">
    <!DOCTYPE html>
@@ -30,27 +27,8 @@
                     CSRMS 
                     </center>
                 </h2>
-
-<<<<<<< HEAD
-                <form name="login" method="POST" action = "login_action.aspx">
                     <asp:Label runat="server" ID="errorMessage" CssClass="error_message_label hidden" Text="Username or Password is incorrect"></asp:Label>
-                    <div class="input_wrapper">
-                        <asp:TextBox
-                            runat="server"
-                            ID="username"
-                            type="text"
-                            name="username"
-                            placeholder="User Name"
-                            title="Input User Name"
-                            CssClass="input_field"
-                        ></asp:TextBox>
-                        <label for="username" class="input_label">User Name</label>
-                    </div>
-                    <div class="input_wrapper">
-                        <asp:TextBox
-                            runat="server"
-                            ID="password"
-=======
+
                     <div class="input_wrapper">
                         <asp:TextBox
                             id="email"
@@ -65,19 +43,13 @@
                     <div class="input_wrapper">
                         <asp:TextBox
                             id="password"
->>>>>>> LoginPage
                             type="password"
                             name="password"
                             placeholder="Your Password"
                             title="minimum 6 characters at least 1 Alphabet and 1 number"
-<<<<<<< HEAD
-                            class="input_field"
-                        ></asp:TextBox>
-=======
                             Cssclass="input_field"
                             runat="server"
-                            />
->>>>>>> LoginPage
+                        ></asp:TextBox>
                         <label for="password" class="input_label">Password</label>
                         <img
                             alt="Eye Icon" title="Eye Icon"
@@ -86,15 +58,9 @@
                     <br>
                     <br>
 
-                    <asp:Button type="submit" Cssclass="login-button" name="login" id="login" text="Login" OnClick="login_Click" runat="server"/>
+                    <asp:Button type="submit" Cssclass="login-button" name="login" id="login" text="Login" OnClick="loginBtnClicked" runat="server"/>
 
                     <asp:Button type="button" Cssclass="create-button" Text="Create Account" onclick="createUser_Click" runat="server"/>
-
-<<<<<<< HEAD
-                    <asp:button runat="server" type="submit" class="login-button" name="submit" id="login" OnClick="loginBtnClicked" Text="Login" />
-                </form>
-=======
->>>>>>> LoginPage
             </div>
             <script src="../Public/Scripts/loginInput.js"></script>
         </main>
