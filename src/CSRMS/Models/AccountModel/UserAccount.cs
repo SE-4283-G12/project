@@ -7,44 +7,47 @@ namespace CSRMS.Models.AccountModel
 {
     public class UserAccount
     {
+        private string emailAddress { get; set; }
         private string firstName { get; set; }
         private string lastName { get; set; }
-        private string emailAddress { get; set; }
         private string password { get; set; }
 
-        public UserAccount(string fname, string lname, string email, string pass)
+        public UserAccount(string firstName, string lastName, string emailAddress, string password)
         {
-            this.firstName = fname;
-            this.lastName = lname;
-            emailAddress = email;
-            password = pass;
-        }
-        public string getFirstName()
-        {
-            return firstName;
-        }
-        public string getLastName()
-        {
-            return lastName;
-        }
-        public string getEmailAddress()
-        {
-            return emailAddress;
-        }
-
-        public void setFirstName(string fname)
-        {
-            firstName = fname;
-        }
-
-        public void setLastName(string lname)
-        {
-            lastName = lname;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.emailAddress = emailAddress;
+            this.password = password;
         }
 
         public void setEmailAddress(string email)
         {
             emailAddress = email;
+        }
+
+        public string getEmailAddress()
+        {
+            return emailAddress;
+        }
+
+        public void setFirstName(string firstName)
+        {
+            this.firstName = firstName;
+        }
+
+        public string getFirstName()
+        {
+            return firstName;
+        }
+
+        public void setLastName(string lastName)
+        {
+            this.lastName = lastName;
+        }
+
+        public string getLastName()
+        {
+            return lastName;
         }
 
         public bool validateCredentials()
