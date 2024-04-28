@@ -110,7 +110,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddTaskPage.aspx" />
+<<<<<<< HEAD
     <Content Include="Pages\CreateAccountPage.aspx" />
+=======
+    <Content Include="Pages\CreateUser.aspx" />
+>>>>>>> LoginPage
     <Content Include="Pages\EditProfileSettingsPage.aspx" />
     <Content Include="Pages\EditTaskPage.aspx" />
     <Content Include="Global.asax" />
@@ -152,18 +156,21 @@
     <Compile Include="Pages\AddTaskPage.aspx.designer.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Pages\CreateAccountPage.aspx.cs">
       <DependentUpon>CreateAccountPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\CreateAccountPage.aspx.designer.cs">
       <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+=======
     <Compile Include="Pages\CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+>>>>>>> LoginPage
     </Compile>
     <Compile Include="Pages\EditProfileSettingsPage.aspx.cs">
       <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>

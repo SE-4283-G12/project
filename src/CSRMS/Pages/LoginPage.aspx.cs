@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Diagnostics;
+=======
+>>>>>>> LoginPage
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+<<<<<<< HEAD
 using CSRMS.Models.AccountModel;
 using CSRMS.Models.DatabaseInterface;
+=======
+>>>>>>> LoginPage
 
 namespace CSRMS.Pages
 {
@@ -14,6 +20,7 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (!Page.IsPostBack)
             {
                 ViewState["ErrorMessage"] = "";
@@ -57,6 +64,7 @@ namespace CSRMS.Pages
             {
                 // Display Error Message
                 ViewState["ErrorMessage"] = "Invalid Username or Password";
+=======
 
         }
 
@@ -81,6 +89,7 @@ namespace CSRMS.Pages
             else
             {
                 Response.Redirect("LandingPage.aspx"); 
+>>>>>>> LoginPage
             }
         }
     }

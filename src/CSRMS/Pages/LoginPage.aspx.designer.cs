@@ -15,12 +15,17 @@ namespace CSRMS.Pages
     {
 
         /// <summary>
+<<<<<<< HEAD
         /// errorMessage control.
+=======
+        /// email control.
+>>>>>>> LoginPage
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Label errorMessage;
 
         /// <summary>
@@ -31,6 +36,9 @@ namespace CSRMS.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox username;
+=======
+        protected global::System.Web.UI.WebControls.TextBox email;
+>>>>>>> LoginPage
 
         /// <summary>
         /// password control.
