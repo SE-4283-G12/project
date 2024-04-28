@@ -33,6 +33,7 @@
                         * All Fields are required to create an account
                     </center>
                 </h4>
+                        <asp:Label ID="errorMessage" runat="server" CssClass="error_message_label hidden"></asp:Label>
                     <div class="input-container">
                         <div class="input_wrapper">
                             <asp:TextBox

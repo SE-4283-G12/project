@@ -12,7 +12,7 @@ namespace CSRMS.Models.AccountModel
             try
             {
                 //Arrange
-                var userAccount = new UserAccount;
+                var userAccount = new UserAccount("FirstName", "lastName", "email", "Password");
                 //Act
 
                 //Assert
