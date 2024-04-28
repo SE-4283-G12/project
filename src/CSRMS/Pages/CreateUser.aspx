@@ -24,7 +24,7 @@
             <div class="container" style="width: 600px">
                 <h2>
                     <center>
-                        <i class="fa-solid fa-user-plus"style="color: #333333;""></i>
+                      <i class="fa-solid fa-user-plus"style="color: #333333;""></i>
                         Create Account
                     </center>
                 </h2>

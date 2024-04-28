@@ -121,6 +121,7 @@
     <Content Include="Public\Images\eye.svg" />
     <Content Include="Public\Scripts\loginInput.js" />
     <Content Include="Public\Scripts\dashboardtable.js" />
+    <Content Include="Public\Scripts\ViewAllTaskTable.js" />
     <Content Include="Public\Styles\sitemaster.css" />
     <Content Include="Public\Styles\forms.css" />
     <Content Include="Public\Styles\table.css" />
@@ -185,14 +186,6 @@
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>

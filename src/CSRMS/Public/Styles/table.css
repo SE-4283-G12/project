@@ -27,7 +27,7 @@ Variables
     --clr-border-1: hsl(207, 44%, 49%);
     /*Teal - Notifications*/
     --clr-notifications-1: hsl(180, 100%, 25%);
-    --clr-odd-row: hsl(0,0%, 83%); 
+    --clr-odd-row: hsl(0,0%, 83%);
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
     --transition: all 0.3s linear;
@@ -117,6 +117,7 @@ Container
     margin: 5em;
     justify-content: center;
 }
+
 main {
     min-height: calc(100vh -3rem);
     display: grid;
@@ -156,20 +157,24 @@ main {
         font-size: 0.875rem;
         color: var(--clr-text-1);
     }
+
     .table-widget thead {
         border-top: 2px solid var(--clr-border-1);
     }
+
     .table-widget tbody tr:nth-child(odd) {
         background: var(--clr-odd-row);
-        
     }
+
     .table-widget tbody tr:hover {
         background: #e2ecff;
     }
+
     .table-widget tbody tr {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
+
     .table-widget td {
         padding: 0.5rem 1rem;
         vertical-align: middle;

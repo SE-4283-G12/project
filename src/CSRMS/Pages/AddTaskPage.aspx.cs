@@ -14,7 +14,7 @@ namespace CSRMS.Pages
         {
             if (IsPostBack)
             {
-                string selectedValue = prioritySelector.Value; 
+
             }
 
         }

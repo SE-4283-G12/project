@@ -145,6 +145,12 @@ place-items: center;
   
 }
 
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    margin-bottom: 2em;
+    width: 95%;
+}
 
 
 .container h2{
@@ -232,6 +238,7 @@ label,
     padding-right: 32px;
     background: transparent;
     transition: all 0.2s;
+
 }
 
 .input_field2::placeholder {
@@ -307,4 +314,19 @@ buttons
 }
     .create-button:hover {
         filter: brightness(.8); 
+    }
+.filter-button {
+    background-color: var(--clr-accent-2);
+    color: var(--clr-background-1);
+    height: 40px;
+    width: 50%;
+    position: relative;
+    border: 2px solid var(--clr-accent-1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: .6;
+    margin-top: 2em; 
+}
+    .create-button:hover {
+        filter: brightness(.8);
     }

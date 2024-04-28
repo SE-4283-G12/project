@@ -51,12 +51,12 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.TextBox time;
 
         /// <summary>
-        /// prioritySelector control.
+        /// priorityDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect prioritySelector;
+        protected global::System.Web.UI.WebControls.DropDownList priorityDropDown;
     }
 }

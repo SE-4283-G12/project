@@ -22,5 +22,15 @@ namespace CSRMS.Pages
 
         public void filterTasks()
         { }
+
+        protected void filterTaskClick(object sender, EventArgs e)
+        {
+            string task = this.task.Text;
+            string date = this.date.Text;
+            string category = this.category.Text;
+            string priority = this.priorityDropDown.SelectedValue; 
+
+            System.Diagnostics.Debug.WriteLine("You\'re attempting to filter: " + task + " " + date + " " + category + " " +priority); 
+        }
     }
 }
