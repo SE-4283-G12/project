@@ -43,7 +43,7 @@ namespace CSRMS.Pages
 
         public void sendCredentials(string email, string password)
         {
-            if(UserAccount.validateCredentials(email, password)) Response.Redirect("HomePage.aspx");
+            if(UserAccount.validateCredentials(email, password)) Response.Redirect("LandingPage.aspx");
             else ViewState["ErrorMessage"] = "Invalid Username or Password";
         }
 

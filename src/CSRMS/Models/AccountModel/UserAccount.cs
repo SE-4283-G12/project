@@ -71,8 +71,18 @@ namespace CSRMS.Models.AccountModel
             return false;
         }
 
-        public void storeCredentials()
-        { }
+        public static bool doesEmailExist(string email)
+        {
+            if (DatabaseInterface.DatabaseInterface.GetUserAccount(email) == null)
+                return false;
+            return true;
+        }
+
+        // using as create new account
+        public static void storeCredentials(string email, string firstName, string lastName, string password)
+        {
+            DatabaseInterface.DatabaseInterface.CreateAccount(email, firstName, lastName, password);
+        }
 
         public void editAccount()
         { }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CSRMS.Models.AccountModel;
 
 namespace CSRMS.Pages
 {
@@ -11,62 +12,44 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                ViewState["ErrorMessage"] = "";
+            }
         }
         protected void createUser_Click(object sender, EventArgs e)
         {
+
             string firstname = this.firstname.Text;
             string lastname = this.lastname.Text;
-            string name = firstname + " " + lastname; 
             string password = this.password.Text;
             string email = this.email.Text;
 
+            // check if any feilds are empty
 
-
-            string[] fields = { firstname, lastname, password, email};
-            List<string> missingFields = new List<string>();
-
-            for (int i = 0; i < fields.Length; i++)
+            if(firstname == "" || lastname == "" || password == "" || email == "")
             {
-                if (fields[i] == "")
-                {
-                    switch (i)
-                    {
-                        case 0:
-                            missingFields.Add("first name");
-                            break;
-                        case 1:
-                            missingFields.Add("last name");
-                            break; 
-                        case 2:
-                            missingFields.Add("password");
-                            break;
-                        case 3:
-                            missingFields.Add("email");
-                            break;
-                    }
-                }
+                displayError("Please enter a value for all fields!");
+                return;
             }
 
-            if (missingFields.Count > 0)
+            // check if email is valid
+
+            if (UserAccount.doesEmailExist(email) == true)
             {
-                string message = $"alert('Please enter a value for {string.Join(", ", missingFields)}!');";
-
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alertMessage", message, true);
-                
+                displayError("Invalid Email Address");
+                return;
             }
-            else
-            {
 
+            UserAccount.storeCredentials(email, firstname, lastname, password);
+            Response.Redirect("LoginPage.aspx");
 
-                this.email.Text = string.Empty;
-                this.firstname.Text = string.Empty;
-                this.lastname.Text = string.Empty;
-                this.password.Text = string.Empty;
-
-                Response.Redirect("LandingPage.aspx"); 
-            }
         }
-
+        public void displayError(string msg)
+        {
+            ViewState["ErrorMessage"] = msg;
+            errorMessage.CssClass = "error_message_label";
+            errorMessage.Text = msg;
+        }
     }
 }
