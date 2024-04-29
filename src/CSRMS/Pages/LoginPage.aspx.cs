@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 using CSRMS.Models.AccountModel;
 using CSRMS.Models.DatabaseInterface;
-
+using CSRMS.Models.EventModel;
 
 namespace CSRMS.Pages
 {
@@ -19,6 +19,7 @@ namespace CSRMS.Pages
             if (!Page.IsPostBack)
             {
                 ViewState["ErrorMessage"] = "";
+                
             }
         }
 
