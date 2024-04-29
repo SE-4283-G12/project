@@ -57,9 +57,10 @@
 
                     <asp:DropDownList ID="priorityDropDown" style="margin-top: 16px" class="input_field2" runat="server">
                         <asp:ListItem value="">Filter by Priority...</asp:ListItem>
-                        <asp:ListItem value="High">High Priority</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium Priority</asp:ListItem>
-                        <asp:ListItem value="Low">Low Priority</asp:ListItem>
+                        <asp:ListItem value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem value="High">High</asp:ListItem>
+                        <asp:ListItem value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <asp:Button type="button" CssClass="filter-button" Text="Filter Task" OnClick="filterTaskClick" runat="server" />

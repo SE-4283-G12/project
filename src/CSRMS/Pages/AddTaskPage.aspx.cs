@@ -16,7 +16,7 @@ namespace CSRMS.Pages
             {
                 //TODO!!
                 // We need to get the categories from the database and store them here.
-                List<string> dbCategories = new List<string> { "Item 1", "Item 2", "Item 3" };
+                List<string> dbCategories = new List<string> {"Select a Category...", "Item 1", "Item 2", "Item 3" };
 
                 // Assign the data source to the drop-down list
                 categoryDropDown.DataSource = dbCategories; 

@@ -78,9 +78,10 @@
 
                     <asp:DropDownList ID="priorityDropDown" class="input_field" runat="server">
                         <asp:ListItem value="">Set priority...</asp:ListItem>
-                        <asp:ListItem value="High">High Priority</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium Priority</asp:ListItem>
-                        <asp:ListItem value="Low">Low Priority</asp:ListItem>
+                        <asp:ListItem value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem value="High">High</asp:ListItem>
+                        <asp:ListItem value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <br />
