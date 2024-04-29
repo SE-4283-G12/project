@@ -62,6 +62,12 @@ const mappedRecords = task
                 ${task.Priority}
             </td>
             <td>
+                ${task.Date}
+            </td>
+            <td>
+                ${task.Time}
+            </td>
+            <td>
                 ${task.Location}
             </td>
             <td>

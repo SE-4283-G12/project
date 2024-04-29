@@ -61,7 +61,6 @@
                         CssClass="input_field"
                         runat="server" />
                     <label for="date" class="input_label">Date<span style="color: red"> *</span></label>
-
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -84,7 +83,11 @@
                         <asp:ListItem value="Low">Low Priority</asp:ListItem>
                     </asp:DropDownList>
                 </div>
+                <br />
+                <div class="input-wrapper">
 
+                    <asp:DropDownList ID="categoryDropDown" class="input_field" runat="server"></asp:DropDownList>
+                </div>
                 <br>
                 <br>
                 <asp:Button type="button" CssClass="create-button" Text="Create Task" OnClick="createTask_Click" runat="server" />
