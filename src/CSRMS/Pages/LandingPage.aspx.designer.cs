@@ -13,5 +13,23 @@ namespace CSRMS.Pages
 
     public partial class LandingPage
     {
+
+        /// <summary>
+        /// tableRowCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tableRowCount;
+
+        /// <summary>
+        /// taskRows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl taskRows;
     }
 }

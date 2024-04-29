@@ -88,7 +88,5 @@ namespace CSRMS.Pages
         {
             Response.Redirect("CreateUser.aspx");
         }
-
-
     }
 }

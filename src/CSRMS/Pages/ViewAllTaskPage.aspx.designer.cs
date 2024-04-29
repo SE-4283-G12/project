@@ -51,6 +51,15 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.DropDownList priorityDropDown;
 
         /// <summary>
+        /// tableRowCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tableRowCount;
+
+        /// <summary>
         /// taskRows control.
         /// </summary>
         /// <remarks>

@@ -139,6 +139,7 @@
     <Compile Include="Models\Controllers\LoginController.cs" />
     <Compile Include="Models\EventModel\Category.cs" />
     <Compile Include="Models\EventModel\EmailReminderImplementation.cs" />
+    <Compile Include="Models\EventModel\Filter.cs" />
     <Compile Include="Models\EventModel\Priority.cs" />
     <Compile Include="Models\EventModel\Reminder.cs" />
     <Compile Include="Models\EventModel\ReminderImplementation.cs" />

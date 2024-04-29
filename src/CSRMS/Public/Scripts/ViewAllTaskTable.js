@@ -37,7 +37,7 @@ const task = [
     }]
 
 let tableRowCount = document.getElementsByClassName('table-row-count');
-tableRowCount[0].innerHTML = `(${task.length}) Tasks`;
+//tableRowCount[0].innerHTML = `(${task.length}) Tasks`;
 
 let tableBody = document.getElementById('task-rows');
 

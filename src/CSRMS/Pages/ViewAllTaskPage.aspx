@@ -70,13 +70,13 @@
                     <h1>
                         <center>View All Task</center>
                     </h1>
-                    <span class="table-row-count" id="table-row-count"></span>
+                    <span runat="server" class="table-row-count" ID="tableRowCount"></span>
                 </caption>
                 <thead>
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
-                        <th>Date</th>
+                        <th>Start Date</th>
                         <th>Time</th>
                         <th>Location</th>
                         <th>Category</th>
