@@ -75,6 +75,8 @@
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
+                        <th>Date</th>
+                        <th>Time</th>
                         <th>Location</th>
                         <th>Category</th>
                     </tr>

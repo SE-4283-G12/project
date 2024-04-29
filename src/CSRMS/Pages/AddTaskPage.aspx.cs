@@ -12,9 +12,17 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (!IsPostBack)
             {
+                //TODO!!
+                // We need to get the categories from the database and store them here.
+                List<string> categories = new List<string> { "Item 1", "Item 2", "Item 3" };
 
+                // Assign the data source to the drop-down list
+                categoryDropDown.DataSource = categories;
+
+                // Bind the data to the drop-down list
+                categoryDropDown.DataBind();
             }
 
         }
