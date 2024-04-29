@@ -48,6 +48,8 @@ namespace CSRMS.Pages
 
                 // track task count
                 int count = 0;
+                tableRowCount.InnerHtml = "";
+                tableRowCount.InnerHtml = (count).ToString();
 
                 foreach (Models.EventModel.Task task in allTasks)
                 {
