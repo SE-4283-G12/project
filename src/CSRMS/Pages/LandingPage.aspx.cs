@@ -12,8 +12,6 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Get todays reminders
-            List<Reminder> todaysReminders = getTodaysReminders();
         }
         public void getViewAllTaskView()
         {

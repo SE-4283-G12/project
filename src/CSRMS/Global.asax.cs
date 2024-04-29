@@ -32,6 +32,7 @@ namespace CSRMS
         {
             // Code that runs when a new session is started
             Session["UserAccount"] = null;
+            Session["UserTasks"] = null;
         }
 
         void Session_End(object sender, EventArgs e)

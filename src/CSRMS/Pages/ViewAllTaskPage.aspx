@@ -81,8 +81,8 @@
                         <th>Category</th>
                     </tr>
                 </thead>
-                <tbody id="task-rows">
-                    <!--? rows are generated -->
+                <tbody runat="server" ID="taskRows">
+                    <!-- rows are generated -->
                 </tbody>
             </table>
         </div>

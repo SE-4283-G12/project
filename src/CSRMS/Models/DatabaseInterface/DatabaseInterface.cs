@@ -399,7 +399,7 @@ namespace CSRMS.Models.DatabaseInterface
                                 DateTime dueDate = (DateTime)reader["due_date"];
                                 string location = reader["location"].ToString();
                                 string description = reader["description"].ToString();
-                                int priority = (int)reader["priority"];
+                                Priority priority = (Priority)((int)reader["priority"]);
 
 
 

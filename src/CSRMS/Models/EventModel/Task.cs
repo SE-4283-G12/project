@@ -14,11 +14,11 @@ namespace CSRMS.Models.EventModel
         private DateTime startDateTime { get; set; }
         private string location { get; set; }
         private string description { get; set; }
-        private int priority { get; set; }
+        private Priority priority { get; set; }
         private List<Category> categories { get; set; }
         private List<Reminder> reminders { get; set; }
 
-        public Task(int taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string location, string description, int priority, List<Category> categories, List<Reminder> reminders)
+        public Task(int taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string location, string description, Priority priority, List<Category> categories, List<Reminder> reminders)
         {
             this.taskId = taskId;
             this.title = title;
@@ -116,12 +116,12 @@ namespace CSRMS.Models.EventModel
         }
 
         // Getter and setter functions for Priority
-        public int GetPriority()
+        public Priority GetPriority()
         {
             return priority;
         }
 
-        public void SetPriority(int value)
+        public void SetPriority(Priority value)
         {
             priority = value;
         }

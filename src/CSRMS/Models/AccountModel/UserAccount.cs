@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CSRMS.Models.EventModel;
+using Microsoft.Ajax.Utilities;
 
 namespace CSRMS.Models.AccountModel
 {
@@ -82,6 +84,11 @@ namespace CSRMS.Models.AccountModel
         public static void storeCredentials(string email, string firstName, string lastName, string password)
         {
             DatabaseInterface.DatabaseInterface.CreateAccount(email, firstName, lastName, password);
+        }
+
+        public List<Task> getAllUserAccountTasks()
+        {
+           return DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
         }
 
         public void editAccount()
