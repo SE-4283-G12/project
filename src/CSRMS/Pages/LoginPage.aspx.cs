@@ -23,32 +23,32 @@ namespace CSRMS.Pages
                 //DatabaseInterface.CreateCategory("Test2", "test@gmail.com");
                 //DatabaseInterface.CreateTaskCategory(2, 2);
                 //DatabaseInterface.CreateReminder(2, "MSG2", DateTime.Now, "Email");
-                Debug.WriteLine(DateTime.Now);
-                List<Task> tasks = DatabaseInterface.GetAllUserAccountTasks("test@gmail.com");
-                foreach (Task task in tasks)
-                {
-                    // Print out all details of task
-                    Debug.WriteLine("TASK ID:" + task.GetTaskId());
-                    Debug.WriteLine("TITLE:" + task.GetTitle());
-                    Debug.WriteLine("ISCOMPLETE:" + task.GetIsComplete());
-                    Debug.WriteLine("DUEDATE:" + task.GetDueDateTime());
-                    Debug.WriteLine("STARTDATE:" + task.GetStartDateTime());
-                    Debug.WriteLine("LOCATION:" + task.GetLocation());
-                    Debug.WriteLine("DESCRIPTION:" + task.GetDescription());
-                    Debug.WriteLine("PRIORITY:" + task.GetPriority());
-                    foreach (Category category in task.GetCategories())
-                    {
-                        Debug.WriteLine("CATEGORY:" + category.getName());
-                    }
-                    foreach (Reminder reminder in task.GetReminders())
-                    {
-                        Debug.WriteLine("REMINDER ID:" + reminder.GetReminderId());
-                        Debug.WriteLine("MESSAGE:" + reminder.GetMessage());
-                        Debug.WriteLine("TASK ID:" + reminder.GetTaskId());
-                        Debug.WriteLine("REMINDER TIME:" + reminder.GetReminderDateTime());
-                    }
+                //Debug.WriteLine(DateTime.Now);
+                //List<Task> tasks = DatabaseInterface.GetAllUserAccountTasks("test@gmail.com");
+                //foreach (Task task in tasks)
+                //{
+                //    // Print out all details of task
+                //    Debug.WriteLine("TASK ID:" + task.GetTaskId());
+                //    Debug.WriteLine("TITLE:" + task.GetTitle());
+                //    Debug.WriteLine("ISCOMPLETE:" + task.GetIsComplete());
+                //    Debug.WriteLine("DUEDATE:" + task.GetDueDateTime());
+                //    Debug.WriteLine("STARTDATE:" + task.GetStartDateTime());
+                //    Debug.WriteLine("LOCATION:" + task.GetLocation());
+                //    Debug.WriteLine("DESCRIPTION:" + task.GetDescription());
+                //    Debug.WriteLine("PRIORITY:" + task.GetPriority());
+                //    foreach (Category category in task.GetCategories())
+                //    {
+                //        Debug.WriteLine("CATEGORY:" + category.getName());
+                //    }
+                //    foreach (Reminder reminder in task.GetReminders())
+                //    {
+                //        Debug.WriteLine("REMINDER ID:" + reminder.GetReminderId());
+                //        Debug.WriteLine("MESSAGE:" + reminder.GetMessage());
+                //        Debug.WriteLine("TASK ID:" + reminder.GetTaskId());
+                //        Debug.WriteLine("REMINDER TIME:" + reminder.GetReminderDateTime());
+                //    }
 
-                }
+                //}
             }
         }
 
@@ -80,7 +80,7 @@ namespace CSRMS.Pages
         public void loginUserAccount()
         {
             // Set the session variables
-            Session["UserTasks"] = ((UserAccount)Session["UserAccount"]).getAllUserAccountTasks();
+            UserAccount.login();
             Response.Redirect("LandingPage.aspx");
         }
 

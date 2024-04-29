@@ -34,10 +34,10 @@
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
-                        ID="date"
+                        ID="startDate"
                         type="date"
                         name="date"
-                        placeholder="Date"
+                        placeholder="Start Date"
                         CssClass="input_field2"
                         runat="server" />
                     <label for="date" class="input_label">Date</label>
@@ -63,7 +63,7 @@
                         <asp:ListItem value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <asp:Button type="button" CssClass="filter-button" Text="Filter Task" OnClick="filterTaskClick" runat="server" />
+                <asp:Button type="button" CssClass="filter-button" Text="Search" OnClick="searchTaskClick" runat="server" />
             </div>
             <table>
                 <caption>

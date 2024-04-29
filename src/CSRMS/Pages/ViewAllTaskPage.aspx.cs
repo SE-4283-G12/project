@@ -83,19 +83,23 @@ namespace CSRMS.Pages
         { }
 
         public void searchTasks()
-        { }
+        {
+            filterTasks();
+        }
 
         public void filterTasks()
-        { }
-
-        protected void filterTaskClick(object sender, EventArgs e)
         {
             string title = Filter.getTitleFilter(task.Text);
-            DateTime? startDate = Filter.getStartDateFilter(date.Text);
+            DateTime? sDate = Filter.getStartDateFilter(startDate.Text);
             string cateogry = Filter.getCategoryFilter(category.Text);
             Priority? priority = Filter.getPriorityFilter(priorityDropDown.Text);
-            searchFilter = new Filter(title, startDate, cateogry, priority);
+            searchFilter = new Filter(title, sDate, cateogry, priority);
             setAllTasksTable();
+        }
+
+        protected void searchTaskClick(object sender, EventArgs e)
+        {
+            searchTasks();
         }
         public struct Filter
         {

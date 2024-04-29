@@ -67,6 +67,7 @@ namespace CSRMS.Models.AccountModel
             UserAccount user = DatabaseInterface.DatabaseInterface.GetUserAccount(email);
             if (user != null && user.getPassword() == password)
             {
+                // add account to session
                 HttpContext.Current.Session["UserAccount"] = user;
                 return true;
             }
@@ -89,6 +90,19 @@ namespace CSRMS.Models.AccountModel
         public List<Task> getAllUserAccountTasks()
         {
            return DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
+        }
+
+        public static void login()
+        {
+            // set session values
+            HttpContext.Current.Session["UserTasks"] = ((UserAccount)HttpContext.Current.Session["UserAccount"]).getAllUserAccountTasks();
+        }
+
+        public static void signOut()
+        {
+            // reset session values
+            HttpContext.Current.Session["UserAccount"] = null;
+            HttpContext.Current.Session["UserTasks"] = null;
         }
 
         public void editAccount()
