@@ -20,10 +20,10 @@
     </head>
     <body>
 
-        <div class="table-widget" style="width:50%;  min-width: 500px">
-            <div class="table-container" >
-                <div style="border-right:2px solid var(--clr-border-1); padding-right:20px">
-                    <h2 style=" margin-top:22px; padding-bottom:15px;  border-block-end: 2px solid var(--clr-border-1);">Add Category</h2>
+        <div class="table-widget" style="width: 50%; min-width: 500px">
+            <div class="table-container">
+                <div style="border-right: 2px solid var(--clr-border-1); padding-right: 20px">
+                    <h2 style="margin-top: 22px; padding-bottom: 15px; border-block-end: 2px solid var(--clr-border-1);">Add Category</h2>
                     <div class="input_wrapper">
                         <asp:TextBox
                             ID="categoryname"
@@ -57,7 +57,17 @@
         </div>
 
         <script src="../Public/Scripts/categoryTable.js"></script>
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var rows = document.querySelectorAll("table tr[runat='server']");
+                rows.forEach(function (row) {
+                    row.addEventListener("click", function () {
+                        // Redirect to the EditCategoryPage.aspx
+                        window.location.href = "EditCategoryPage.aspx";
+                    });
+                });
+            });
+        </script>
 
     </body>
 

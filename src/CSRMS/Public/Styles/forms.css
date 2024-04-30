@@ -335,6 +335,21 @@ buttons
         filter: brightness(.8);
     }
 
+.delete-button {
+    background-color: red;
+    color: var(--clr-background-1);
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 2px solid var(--clr-accent-1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: .6;
+}
+
+    .delete-button:hover {
+        filter: brightness(.8);
+    }
 /*
 =======
 checkbox

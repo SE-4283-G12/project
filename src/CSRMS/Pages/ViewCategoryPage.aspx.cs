@@ -37,7 +37,7 @@ namespace CSRMS.Pages
                     // for each task that passes filtering we want to adjust the count of tasks for view
                     //tableRowCount.InnerHtml = (++count).ToString();
                     // Generate HTML for each row
-                    rowsHtml.Append("<tr>");
+                    rowsHtml.Append("<tr OnClick=\"TableRowClicked()\" runat=\"server\">");
                     rowsHtml.Append("<td>").Append(category.getName()).Append("</td>");
                     rowsHtml.Append("</tr>");
                 }
@@ -52,6 +52,11 @@ namespace CSRMS.Pages
         {
             System.Diagnostics.Debug.WriteLine("Task button clicked");
 
+        }
+
+        protected void TableRowClicked(object sender, EventArgs e)
+        {
+            Response.Redirect("EditCategoryPage.aspx"); 
         }
     }
 }
