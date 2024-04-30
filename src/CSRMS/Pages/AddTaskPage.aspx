@@ -84,8 +84,10 @@
                 </div>
                 <br />
                 <div class="input-wrapper">
-                    <asp:ListBox ID="categoryListbox" class="input_field" SelectionMode="multiple"  runat="server">
-                     <asp:ListItem Value="">Select a Category...</asp:ListItem>
+                    <asp:ListBox ID="categoryListbox" ToolTip="Shift click to select multiple, Control click to remove reminders" class="input_field" SelectionMode="multiple" runat="server">
+                        <asp:ListItem Value="">Select a Category...</asp:ListItem>
+                        <asp:ListItem Value="A">A</asp:ListItem>
+                        <asp:ListItem Value="B">B</asp:ListItem>
                     </asp:ListBox>
                 </div>
                 <%--<div class="input_wrapper">
@@ -98,7 +100,7 @@
                         runat="server" />
                     <label for="date" class="input_label">Reminder Date and Time</label>
                 </div>--%>
-                 <div class="input_wrapper">
+                <div class="input_wrapper">
                     <asp:TextBox
                         ID="description"
                         type="text"

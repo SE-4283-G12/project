@@ -91,7 +91,7 @@
                         <th>Category</th>
                     </tr>
                 </thead>
-                <tbody runat="server" id="taskRows">
+                <tbody runat="server" title="Edit Task" id="taskRows">
                     <!-- rows are generated -->
                 </tbody>
             </table>
