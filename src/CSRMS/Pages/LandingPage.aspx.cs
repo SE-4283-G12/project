@@ -16,23 +16,29 @@ namespace CSRMS.Pages
         public Filter searchFilter;
         protected void Page_Load(object sender, EventArgs e)
         {
-            getTodaysTasks();
+            getTodaysTasks();       // Display all user's task for todays date
+            // getWeeksTasks();     // Display the rest of the weeks tasks
         }
         public void getViewAllTaskView()
         {
-            Response.Redirect("ViewAllTasksPage.aspx");
+            Response.Redirect("ViewAllTasksPage.aspx");     // Load to View All Tasks Page
         }
         public void getAddTaskView()
         {
-            Response.Redirect("AddTaskPage.aspx");
+            Response.Redirect("AddTaskPage.aspx");      // Load to Add Task Page
         }
         public void getEditProfileView()
         {
-            Response.Redirect("EditProfileSettingsPage.aspx");
+            Response.Redirect("EditProfileSettingsPage.aspx");      // Load to Edit Profile Page
         }
-        public void getTodaysTasks()
+        public void getTodaysTasks()        // Find and Display all todays tasks
         {
             searchTasks();
+        }
+
+        public void getWeeksTasks()         // Find and Display this weeks tasks
+        {
+            // new filter to be applied to filterTasks()
         }
 
 
@@ -92,9 +98,9 @@ namespace CSRMS.Pages
             filterTasks();
         }
 
-        public void filterTasks()
+        public void filterTasks()       // Filter Tasks to display with specific conditions
         {
-            searchFilter = new Filter("", DateTime.Now.Date, "", null);
+            searchFilter = new Filter("", DateTime.Now.Date, "", null);     // May need to be updated to have the function for both Today and the Week
             setAllTasksTable();
         }
     }

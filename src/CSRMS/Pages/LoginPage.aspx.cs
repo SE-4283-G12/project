@@ -33,18 +33,14 @@ namespace CSRMS.Pages
                 errorMessage.CssClass = "error_message_label";
             }
         }
-        public void createAccountSelected()
-        {
-            Response.Redirect("CreateAccountPage.aspx");
-        }
 
-        public void loginBtnClicked(object sender, EventArgs e)
+        public void loginBtnClicked(object sender, EventArgs e)     // Confirm Login
         {
             sendCredentials(email.Text, password.Text);
             errorCheck();
         }
 
-        public void sendCredentials(string email, string password)
+        public void sendCredentials(string email, string password)      //Verification of user credentials
         {
             if(UserAccount.validateCredentials(email, password)) loginUserAccount();
             else ViewState["ErrorMessage"] = "Invalid Username or Password";
@@ -57,7 +53,7 @@ namespace CSRMS.Pages
             Response.Redirect("LandingPage.aspx");
         }
 
-        protected void createUser_Click(object sender, EventArgs e)
+        protected void createUser_Click(object sender, EventArgs e)     // Load to Create User Page
         {
             Response.Redirect("CreateUser.aspx");
         }

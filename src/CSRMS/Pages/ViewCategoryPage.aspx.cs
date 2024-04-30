@@ -15,7 +15,7 @@ namespace CSRMS.Pages
         {
             setCategoriesTable();
         }
-        public void setCategoriesTable()
+        public void setCategoriesTable()        // Display each of a users Categories
         {
             List<Models.EventModel.Category> allCategories = Session["UserCategories"] as List<Models.EventModel.Category>;
             if (allCategories != null)
@@ -48,7 +48,7 @@ namespace CSRMS.Pages
                 categoryRows.InnerHtml = rowsHtml.ToString();
             }
         }
-        protected void creatcategory_Click(object sender, EventArgs e)
+        protected void creatcategory_Click(object sender, EventArgs e)      // Create new user category
         {
             System.Diagnostics.Debug.WriteLine("Task button clicked");
 

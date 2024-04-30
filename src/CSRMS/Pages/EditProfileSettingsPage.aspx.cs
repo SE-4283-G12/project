@@ -25,6 +25,7 @@ namespace CSRMS.Pages
             if (ViewState["ErrorMessage"].ToString() == "Passwords do not match")
             {
                 // Display Error Message
+
                 errorMessage.CssClass = "error_message_label";
                 errorMessage.Text = ViewState["ErrorMessage"].ToString();
             }
@@ -34,24 +35,24 @@ namespace CSRMS.Pages
             }
         }
 
-        public void displayProfileInformation()
+        public void displayProfileInformation()     // Display current account First and Last name
         {
             UserAccount user = (UserAccount)Session["UserAccount"];
             firstname.Text = user.getFirstName();
             lastname.Text = user.getLastName();
         }
 
-        public void changePassword(string newPassword)
+        public void changePassword(string newPassword)      // Change account Password
         {
             ((UserAccount)Session["UserAccount"]).editAccount("", "", newPassword);
         }
 
-        public void changeUsersName(string firstName, string lastName)
+        public void changeUsersName(string firstName, string lastName)      // Change account First and Last name
         {
             ((UserAccount)Session["UserAccount"]).editAccount(firstName, lastName, "");
         }
 
-        protected void saveChangesBtn_Click(object sender, EventArgs e)
+        protected void saveChangesBtn_Click(object sender, EventArgs e)     // Commit changes to account Password, First and Last name
         {
             bool isChangeMade = false;
             if (firstname.Text.Length > 0 && lastname.Text.Length > 0)
@@ -75,7 +76,7 @@ namespace CSRMS.Pages
             errorCheck();
         }
 
-        protected void deleteAccount_Click(object sender, EventArgs e)
+        protected void deleteAccount_Click(object sender, EventArgs e)      // DELETE user account
         {
             UserAccount user = ((UserAccount)Session["UserAccount"]);
             user.deleteAccount();

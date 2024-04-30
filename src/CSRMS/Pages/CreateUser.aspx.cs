@@ -10,14 +10,14 @@ namespace CSRMS.Pages
 {
     public partial class CreateUser : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)    //Checking for page loading errors
+        protected void Page_Load(object sender, EventArgs e)    // Checking for page loading errors
         {
             if (!Page.IsPostBack)
             {
                 ViewState["ErrorMessage"] = "";
             }
         }
-        protected void createUser_Click(object sender, EventArgs e)     //Create user button selected
+        protected void createUser_Click(object sender, EventArgs e)     // Create new user
         {
 
             string firstname = this.firstname.Text;

@@ -28,13 +28,14 @@ namespace CSRMS.Pages
         //public void defineTaskParameters()
         //{ }
 
-        //public void addReminder()
+        //public void addReminder()     //take parameter string to create individual
+                                        //reminders based on selection during task creation
         //{ }
 
         public void saveTask()
         { }
 
-        protected void createTask_Click(object sender, EventArgs e)
+        protected void createTask_Click(object sender, EventArgs e)     //confirm task creation 
         {
             System.Diagnostics.Debug.WriteLine("Task button clicked"); 
 

@@ -25,7 +25,7 @@ namespace CSRMS.Pages
             setAllTasksTable();
         }
 
-        public void setAllTasksTable()
+        public void setAllTasksTable()      // Display all  users tasks
         {
             List<Models.EventModel.Task> allTasks = Session["UserTasks"] as List<Models.EventModel.Task>;
             if (allTasks != null)
@@ -92,12 +92,12 @@ namespace CSRMS.Pages
         public void setEditTaskView()
         { }
 
-        public void searchTasks()
+        public void searchTasks()       // Initiate Filters
         {
             filterTasks();
         }
 
-        public void filterTasks()
+        public void filterTasks()       // Set individual filters to allow the user to search for specific tasks based on the filters
         {
             string title = Filter.getTitleFilter(task.Text);
             DateTime? sDate = Filter.getStartDateFilter(startDate.Text);
@@ -107,7 +107,7 @@ namespace CSRMS.Pages
             setAllTasksTable();
         }
 
-        protected void searchTaskClick(object sender, EventArgs e)
+        protected void searchTaskClick(object sender, EventArgs e)      // Initiate Search
         {
             searchTasks();
         }
