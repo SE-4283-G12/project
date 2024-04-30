@@ -84,9 +84,9 @@
                 </div>
                 <br />
                 <div class="input-wrapper">
-                    <asp:DropDownList ID="categoryDropDown" class="input_field" runat="server">
+                    <asp:ListBox ID="categoryListbox" class="input_field" SelectionMode="multiple"  runat="server">
                      <asp:ListItem Value="">Select a Category...</asp:ListItem>
-                    </asp:DropDownList>
+                    </asp:ListBox>
                 </div>
                 <%--<div class="input_wrapper">
                     <asp:TextBox

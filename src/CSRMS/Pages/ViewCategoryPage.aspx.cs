@@ -48,5 +48,10 @@ namespace CSRMS.Pages
                 categoryRows.InnerHtml = rowsHtml.ToString();
             }
         }
+        protected void creatcategory_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Task button clicked");
+
+        }
     }
 }

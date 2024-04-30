@@ -60,13 +60,13 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.DropDownList priorityDropDown;
 
         /// <summary>
-        /// categoryDropDown control.
+        /// categoryListbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList categoryDropDown;
+        protected global::System.Web.UI.WebControls.ListBox categoryListbox;
 
         /// <summary>
         /// description control.

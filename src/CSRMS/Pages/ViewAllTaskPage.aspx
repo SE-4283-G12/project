@@ -30,7 +30,7 @@
                         placeholder="Search Task"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="email" class="input_label">Search Task</label>
+                    <label for="task" class="input_label">Search Task</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -40,7 +40,7 @@
                         placeholder="Start Date"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="date" class="input_label">Start Date</label>
+                    <label for="startDate" class="input_label">Start Date</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -50,7 +50,7 @@
                         placeholder="Search Categories"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="taskname" class="input_label">Category Name</label>
+                    <label for="category" class="input_label">Category Name</label>
                 </div>
 
                 <div class="input-wrapper">
