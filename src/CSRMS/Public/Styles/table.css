@@ -126,7 +126,7 @@ main {
 }
 
 .table-widget {
-    width: 95%;
+    width: fit-content;
     text-align: left;
     background: var(--clr-background-1);
     border: 2px solid var(--clr-border-1);

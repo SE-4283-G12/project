@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CSRMS.Models.EventModel;
+using Microsoft.Ajax.Utilities;
 
 namespace CSRMS.Models.AccountModel
 {
@@ -65,6 +67,7 @@ namespace CSRMS.Models.AccountModel
             UserAccount user = DatabaseInterface.DatabaseInterface.GetUserAccount(email);
             if (user != null && user.getPassword() == password)
             {
+                // add account to session
                 HttpContext.Current.Session["UserAccount"] = user;
                 return true;
             }
@@ -84,11 +87,48 @@ namespace CSRMS.Models.AccountModel
             DatabaseInterface.DatabaseInterface.CreateAccount(email, firstName, lastName, password);
         }
 
-        public void editAccount()
-        { }
+        public List<Task> getAllUserAccountTasks()
+        {
+           return DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
+        }
+
+        public List<Category> getAllUserAccountCategories()
+        {
+            return DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
+        }
+
+        public static void login()
+        {
+            // set session values
+            HttpContext.Current.Session["UserTasks"] = ((UserAccount)HttpContext.Current.Session["UserAccount"]).getAllUserAccountTasks();
+            HttpContext.Current.Session["UserCategories"] = ((UserAccount)HttpContext.Current.Session["UserAccount"]).getAllUserAccountCategories();
+        }
+
+        public static void signOut()
+        {
+            // reset session values
+            HttpContext.Current.Session["UserAccount"] = null;
+            HttpContext.Current.Session["UserTasks"] = null;
+        }
+
+        public void editAccount(string firstName, string lastName, string password)
+        {
+            if (firstName == "") firstName = this.firstName;
+            if(lastName == "") lastName = this.lastName;
+            if (password == "") password = this.password;
+            DatabaseInterface.DatabaseInterface.UpdateUserAccount(this.emailAddress, firstName, lastName, password);
+            resetUserAccountSessionData();
+        }
+
+        public void resetUserAccountSessionData()
+        {
+            HttpContext.Current.Session["UserAccount"] = DatabaseInterface.DatabaseInterface.GetUserAccount(this.emailAddress);
+        }
 
         public void deleteAccount()
-        { }
+        {
+            DatabaseInterface.DatabaseInterface.DeleteUserAccount(this.emailAddress);
+        }
 
     }
 }

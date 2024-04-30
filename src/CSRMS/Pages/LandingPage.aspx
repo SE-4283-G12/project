@@ -18,24 +18,25 @@
         <link rel="stylesheet" href="../Public/Styles/table.css">
     </head>
     <body>
-        <div class="table-widget">
+        <div class="table-widget" style="min-width:500px">
             <table>
                 <caption>
                     <h1>
                         <center>Today's Task</center>
                     </h1>
-                    <span class="table-row-count" id="table-row-count"></span>
+                    <span runat="server" class="table-row-count" id="tableRowCount"></span>
                 </caption>
                 <thead>
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
-                        <th>Time</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
                         <th>Location</th>
                         <th>Category</th>
                     </tr>
                 </thead>
-                <tbody id="task-rows">
+                <tbody runat="server" ID="taskRows">
                     <!--? rows are generated -->
                 </tbody>
             </table>

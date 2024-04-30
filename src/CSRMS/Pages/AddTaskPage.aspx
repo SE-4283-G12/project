@@ -43,6 +43,26 @@
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
+                        ID="startdate"
+                        type="datetime-local"
+                        name="startdate"
+                        placeholder="Date"
+                        CssClass="input_field"
+                        runat="server" />
+                    <label for="date" class="input_label">Start Date<span style="color: red"> *</span></label>
+                </div>
+                <div class="input_wrapper">
+                    <asp:TextBox
+                        ID="enddate"
+                        type="datetime-local"
+                        name="enddate"
+                        placeholder="End Date"
+                        CssClass="input_field"
+                        runat="server" />
+                    <label for="date" class="input_label">End Date<span style="color: red"> *</span></label>
+                </div>
+                <div class="input_wrapper">
+                    <asp:TextBox
                         ID="location"
                         type="text"
                         name="location"
@@ -52,43 +72,43 @@
                         runat="server" />
                     <label for="location" class="input_label">Location</label>
                 </div>
-                <div class="input_wrapper">
-                    <asp:TextBox
-                        ID="date"
-                        type="date"
-                        name="date"
-                        placeholder="Date"
-                        CssClass="input_field"
-                        runat="server" />
-                    <label for="date" class="input_label">Date<span style="color: red"> *</span></label>
-                </div>
-                <div class="input_wrapper">
-                    <asp:TextBox
-                        ID="time"
-                        type="time"
-                        name="time"
-                        placeholder="Time"
-                        title="The Time the task should be completed"
-                        CssClass="input_field"
-                        runat="server" />
-                    <label for="time" class="input_label">Time</label>
-                </div>
                 <br />
                 <div class="input-wrapper">
-
                     <asp:DropDownList ID="priorityDropDown" class="input_field" runat="server">
-                        <asp:ListItem value="">Set priority...</asp:ListItem>
-                        <asp:ListItem value="High">High Priority</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium Priority</asp:ListItem>
-                        <asp:ListItem value="Low">Low Priority</asp:ListItem>
+                        <asp:ListItem Value="">Set priority...</asp:ListItem>
+                        <asp:ListItem Value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem Value="High">High</asp:ListItem>
+                        <asp:ListItem Value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem Value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <br />
                 <div class="input-wrapper">
-
-                    <asp:DropDownList ID="categoryDropDown" class="input_field" runat="server"></asp:DropDownList>
+                    <asp:ListBox ID="categoryListbox" class="input_field" SelectionMode="multiple"  runat="server">
+                     <asp:ListItem Value="">Select a Category...</asp:ListItem>
+                    </asp:ListBox>
                 </div>
-                <br>
+                <%--<div class="input_wrapper">
+                    <asp:TextBox
+                        ID="remindertime"
+                        type="datetime-local"
+                        name="reminderdatetime"
+                        placeholder="Reminder Date and Time"
+                        CssClass="input_field"
+                        runat="server" />
+                    <label for="date" class="input_label">Reminder Date and Time</label>
+                </div>--%>
+                 <div class="input_wrapper">
+                    <asp:TextBox
+                        ID="description"
+                        type="text"
+                        name="description"
+                        placeholder="Task Description"
+                        title="Input Task Descriptioni"
+                        CssClass="input_field"
+                        runat="server" />
+                    <label for="taskname" class="input_label">Task Description</label>
+                </div>
                 <br>
                 <asp:Button type="button" CssClass="create-button" Text="Create Task" OnClick="createTask_Click" runat="server" />
 

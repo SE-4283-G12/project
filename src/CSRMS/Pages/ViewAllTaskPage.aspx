@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="../Public/Styles/forms.css">
     </head>
     <body>
-        <div class="table-widget">
+        <div class="table-widget" style="min-width:650px">
             <div class="filter-container" style="margin-bottom: 5em; width: 95%">
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -30,17 +30,17 @@
                         placeholder="Search Task"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="email" class="input_label">Search Task</label>
+                    <label for="task" class="input_label">Search Task</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
-                        ID="date"
+                        ID="startDate"
                         type="date"
                         name="date"
-                        placeholder="Date"
+                        placeholder="Start Date"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="date" class="input_label">Date</label>
+                    <label for="startDate" class="input_label">Start Date</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -50,39 +50,49 @@
                         placeholder="Search Categories"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="taskname" class="input_label">Category Name</label>
+                    <label for="category" class="input_label">Category Name</label>
                 </div>
 
                 <div class="input-wrapper">
 
-                    <asp:DropDownList ID="priorityDropDown" style="margin-top: 16px" class="input_field2" runat="server">
-                        <asp:ListItem value="">Filter by Priority...</asp:ListItem>
-                        <asp:ListItem value="High">High Priority</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium Priority</asp:ListItem>
-                        <asp:ListItem value="Low">Low Priority</asp:ListItem>
+                    <asp:DropDownList ID="priorityDropDown" Style="margin-top: 16px" class="input_field2" runat="server">
+                        <asp:ListItem Value="">Filter By Priority...</asp:ListItem>
+                        <asp:ListItem Value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem Value="High">High</asp:ListItem>
+                        <asp:ListItem Value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem Value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <asp:Button type="button" CssClass="filter-button" Text="Filter Task" OnClick="filterTaskClick" runat="server" />
+                <div class="input-wrapper">
+
+                    <asp:DropDownList ID="completedTaskDropDown" Style="margin-top: 16px" class="input_field2" runat="server">
+                        <asp:ListItem Value="">Filter by Task Completion...</asp:ListItem>
+                        <asp:ListItem Value="Completed">Completed Task</asp:ListItem>
+                        <asp:ListItem Value="Not Completed">Not Completed Task</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div></div>
+                <asp:Button type="button" CssClass="filter-button" Text="Search" OnClick="searchTaskClick" runat="server" />
             </div>
             <table>
                 <caption>
                     <h1>
                         <center>View All Task</center>
                     </h1>
-                    <span class="table-row-count" id="table-row-count"></span>
+                    <span runat="server" class="table-row-count" id="tableRowCount"></span>
                 </caption>
                 <thead>
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
-                        <th>Date</th>
-                        <th>Time</th>
+                        <th>Start Date</th>
+                        <th>End Time</th>
                         <th>Location</th>
                         <th>Category</th>
                     </tr>
                 </thead>
-                <tbody id="task-rows">
-                    <!--? rows are generated -->
+                <tbody runat="server" id="taskRows">
+                    <!-- rows are generated -->
                 </tbody>
             </table>
         </div>

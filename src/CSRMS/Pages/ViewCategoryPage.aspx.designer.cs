@@ -7,29 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSRMS
+namespace CSRMS.Pages
 {
 
 
-    public partial class SiteMaster
+    public partial class ViewCategoryPage
     {
 
         /// <summary>
-        /// signOut control.
+        /// categoryname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton signOut;
+        protected global::System.Web.UI.WebControls.TextBox categoryname;
 
         /// <summary>
-        /// MainContent control.
+        /// tablerowcontent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tablerowcontent;
+
+        /// <summary>
+        /// categoryRows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl categoryRows;
     }
 }

@@ -24,13 +24,19 @@ namespace CSRMS.Pages
             string lastname = this.lastname.Text;
             string password = this.password.Text;
             string email = this.email.Text;
-
+            string confirmpassword = this.confirmPassword.Text; 
             // check if any feilds are empty
 
-            if(firstname == "" || lastname == "" || password == "" || email == "")
+            if(firstname == "" || lastname == "" || password == "" || email == "" || confirmpassword == "")
             {
                 displayError("Please enter a value for all fields!");
                 return;
+            }
+
+            if(password != confirmpassword)
+            {
+                displayError("Please ensure your passwords match!");
+                return; 
             }
 
             // check if email is valid
