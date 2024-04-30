@@ -117,8 +117,10 @@
     <Content Include="Pages\LandingPage.aspx" />
     <Content Include="Pages\LoginPage.aspx" />
     <Content Include="Pages\ViewAllTaskPage.aspx" />
+    <Content Include="Pages\ViewCategoryPage.aspx" />
     <Content Include="Public\Images\eye-off.svg" />
     <Content Include="Public\Images\eye.svg" />
+    <Content Include="Public\Scripts\categoryTable.js" />
     <Content Include="Public\Scripts\loginInput.js" />
     <Content Include="Public\Scripts\dashboardtable.js" />
     <Content Include="Public\Scripts\ViewAllTaskTable.js" />
@@ -199,6 +201,13 @@
     </Compile>
     <Compile Include="Pages\ViewAllTaskPage.aspx.designer.cs">
       <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewCategoryPage.aspx.cs">
+      <DependentUpon>ViewCategoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewCategoryPage.aspx.designer.cs">
+      <DependentUpon>ViewCategoryPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
