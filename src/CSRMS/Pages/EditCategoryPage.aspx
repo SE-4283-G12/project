@@ -21,7 +21,7 @@
     <body>
 
         <div class="container" style="width: 35%">
-            <i class="fa-solid fa-arrow-left fa-lg" style="cursor: pointer;" title="back to categories" onclick="CategoriesBack()"></i>
+            <i class="fa-solid fa-arrow-left fa-2xl" style="cursor: pointer;" title="back to categories" onclick="CategoriesBack()"></i>
             <h2>Edit Category</h2>
             <div class="input_wrapper">
                 <asp:TextBox
