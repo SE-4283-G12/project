@@ -96,6 +96,9 @@
                 <br>
                 <br>
                 <asp:Button type="button" Cssclass="create-button" Text="Save Changes" ID="saveChangesBtn" OnClick="saveChangesBtn_Click" runat="server" />
+                <br />
+                <br />
+                <asp:Button type="button" Cssclass="create-button" Text="Delete Account" ID="deleteAccount" OnClick="saveChangesBtn_Click" runat="server" style="background-color:red"/>
 </div>
 </body>
 </html>
