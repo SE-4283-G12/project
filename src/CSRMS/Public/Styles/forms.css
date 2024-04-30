@@ -147,7 +147,7 @@ place-items: center;
 }
 .table-container{
     display: grid;
-    grid-template-columns: 30% 65%; 
+    grid-template-columns: 40% 55%; 
 }
 
 .filter-container {
