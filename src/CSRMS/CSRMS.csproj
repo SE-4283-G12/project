@@ -135,10 +135,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\AccountModel\UserAccount.cs" />
-    <Compile Include="Models\Controllers\AccountController.cs" />
-    <Compile Include="Models\Controllers\EventsController.cs" />
-    <Compile Include="Models\Controllers\LandingController.cs" />
-    <Compile Include="Models\Controllers\LoginController.cs" />
     <Compile Include="Models\EventModel\Category.cs" />
     <Compile Include="Models\EventModel\EmailReminderImplementation.cs" />
     <Compile Include="Models\EventModel\Filter.cs" />

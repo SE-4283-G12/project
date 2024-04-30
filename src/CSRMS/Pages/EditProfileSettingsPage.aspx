@@ -37,7 +37,7 @@
                 </center>
             </h4>
                     <asp:Label ID="errorMessage" runat="server" CssClass="error_message_label hidden"></asp:Label>
-                <div class="input-container">
+                <div class="">
                     <div class="input_wrapper">
                         <asp:TextBox
                             id="firstname"
@@ -98,7 +98,7 @@
                 <asp:Button type="button" Cssclass="create-button" Text="Save Changes" ID="saveChangesBtn" OnClick="saveChangesBtn_Click" runat="server" />
                 <br />
                 <br />
-                <asp:Button type="button" Cssclass="create-button" Text="Delete Account" ID="deleteAccount" OnClick="saveChangesBtn_Click" runat="server" style="background-color:red"/>
+                <asp:Button type="button" Cssclass="create-button" Text="Delete Account" ID="deleteAccount" OnClick="deleteAccount_Click" runat="server" style="background-color:red"/>
 </div>
 </body>
 </html>

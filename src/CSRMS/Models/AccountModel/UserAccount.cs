@@ -126,7 +126,9 @@ namespace CSRMS.Models.AccountModel
         }
 
         public void deleteAccount()
-        { }
+        {
+            DatabaseInterface.DatabaseInterface.DeleteUserAccount(this.emailAddress);
+        }
 
     }
 }

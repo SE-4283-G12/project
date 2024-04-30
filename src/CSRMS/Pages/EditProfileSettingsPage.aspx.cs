@@ -74,5 +74,13 @@ namespace CSRMS.Pages
             displayProfileInformation();
             errorCheck();
         }
+
+        protected void deleteAccount_Click(object sender, EventArgs e)
+        {
+            UserAccount user = ((UserAccount)Session["UserAccount"]);
+            user.deleteAccount();
+            UserAccount.signOut();
+            Response.Redirect("LoginPage");
+        }
     }
 }
