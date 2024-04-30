@@ -18,9 +18,9 @@ function togglePasswordFields() {
 
 
 function validateTwoPasswords() {
-    var newPassword = document.getElementById("TextBox1").value;
-    var confirmNewPassword = document.getElementById("TextBox2").value;
-    var newPasswordField = document.getElementById("TextBox1");
+    var newPassword = document.getElementById("passwordNew").value;
+    var confirmNewPassword = document.getElementById("passwordConfirm").value;
+    var newPasswordField = document.getElementById("passwordNew");
 
     if (newPassword !== confirmNewPassword) {
         newPasswordField.setCustomValidity("Passwords do not match");

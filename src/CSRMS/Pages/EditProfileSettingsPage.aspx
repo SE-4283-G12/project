@@ -28,12 +28,12 @@
             <h2>
                 <center>
                   <i class="fa-solid fa-user-plus"style="color: #333333;""></i>
-                    Update Profile
+                    Edit Profile
                 </center>
             </h2>
             <h4>
                 <center>
-                    * All Fields are required to create an account
+                    To Save Changes Please Press Save Changes
                 </center>
             </h4>
                     <asp:Label ID="errorMessage" runat="server" CssClass="error_message_label hidden"></asp:Label>
@@ -49,6 +49,8 @@
                             runat="server"/>
                         <label for="firstname" class="input_label">First Name</label>
                     </div>
+                    </div>
+                <div class="input-container">
                     <div class="input_wrapper">
                         <asp:TextBox
                             id="lastname"
@@ -64,24 +66,12 @@
 
                 </div>
                 <div class="input_wrapper">
-                    <asp:TextBox
-                        id="password"
-                        type="text"
-                        name="password"
-                        placeholder="Password (required)"
-                        title="minimum 6 characters at least 1 Alphabet and 1 number"
-                        Cssclass="input_field"
-                        runat="server"
-                        />
-                    <label for="password" class="input_label">Current Password</label>
-                </div>
-                <div class="input_wrapper">
-                    <h3 style="text-align:left; color:red">Please click below check box to update password</h3>
+                    <h4 style="text-align:left; color:var(--clr-header-1)">Please click below check box to update password</h4>
                     <input type="checkbox" id="passwordCheckbox" onclick="togglePasswordFields()" style="transform: scale(1.5);" />
                 </div>
                 <div class="input_wrapper" id ="newpassword">
                     <asp:TextBox
-                    id="TextBox1"
+                    id="passwordNew"
                     type="text"
                     name="lastname"
                     placeholder="Last Name (required)"
@@ -93,7 +83,7 @@
                 </div>
                 <div class="input_wrapper" id ="confirmnewpassword">
                     <asp:TextBox
-                    id="TextBox2"
+                    id="passwordConfirm"
                     type="text"
                     name="lastname"
                     placeholder="Last Name (required)"
@@ -105,7 +95,7 @@
 </div>
                 <br>
                 <br>
-                <asp:Button type="button" Cssclass="create-button" Text="Update Profile" runat="server" />
+                <asp:Button type="button" Cssclass="create-button" Text="Save Changes" ID="saveChangesBtn" OnClick="saveChangesBtn_Click" runat="server" />
 </div>
 </body>
 </html>

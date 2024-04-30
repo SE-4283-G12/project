@@ -42,30 +42,30 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.TextBox lastname;
 
         /// <summary>
-        /// password control.
+        /// passwordNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox passwordNew;
 
         /// <summary>
-        /// TextBox1 control.
+        /// passwordConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox passwordConfirm;
 
         /// <summary>
-        /// TextBox2 control.
+        /// saveChangesBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Button saveChangesBtn;
     }
 }

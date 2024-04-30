@@ -105,8 +105,19 @@ namespace CSRMS.Models.AccountModel
             HttpContext.Current.Session["UserTasks"] = null;
         }
 
-        public void editAccount()
-        { }
+        public void editAccount(string firstName, string lastName, string password)
+        {
+            if (firstName == "") firstName = this.firstName;
+            if(lastName == "") lastName = this.lastName;
+            if (password == "") password = this.password;
+            DatabaseInterface.DatabaseInterface.UpdateUserAccount(this.emailAddress, firstName, lastName, password);
+            resetUserAccountSessionData();
+        }
+
+        public void resetUserAccountSessionData()
+        {
+            HttpContext.Current.Session["UserAccount"] = DatabaseInterface.DatabaseInterface.GetUserAccount(this.emailAddress);
+        }
 
         public void deleteAccount()
         { }
