@@ -31,7 +31,7 @@
                         <th>Task Name</th>
                         <th>Priority</th>
                         <th>Start Date</th>
-                        <th>Time</th>
+                        <th>End Date</th>
                         <th>Location</th>
                         <th>Category</th>
                     </tr>

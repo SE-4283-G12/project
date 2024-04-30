@@ -148,7 +148,7 @@ place-items: center;
 
 .filter-container {
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(5, 2fr);
     margin-bottom: 2em;
     width: 95%;
 }
@@ -331,3 +331,29 @@ buttons
     .create-button:hover {
         filter: brightness(.8);
     }
+
+/*
+=======
+checkbox
+=======
+*/
+.form-checkbox{
+    display:block; 
+}
+.input-checkbox{
+    display:flex;
+    align-items:center;
+    margin: 20px 0px; 
+}
+
+.input-checkbox input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    border: 2px solid var(--clr-accent-1);
+    border-radius: 6px;
+}
+
+.input-checkbox label{
+    margin-left: 12px;
+    font-weight: 600; 
+}

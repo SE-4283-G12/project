@@ -40,7 +40,7 @@
                         placeholder="Start Date"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="date" class="input_label">Date</label>
+                    <label for="date" class="input_label">Start Date</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -55,12 +55,20 @@
 
                 <div class="input-wrapper">
 
-                    <asp:DropDownList ID="priorityDropDown" style="margin-top: 16px" class="input_field2" runat="server">
-                        <asp:ListItem value="">Filter by Priority...</asp:ListItem>
-                        <asp:ListItem value="Urgent">Urgent</asp:ListItem>
-                        <asp:ListItem value="High">High</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium</asp:ListItem>
-                        <asp:ListItem value="Low">Low</asp:ListItem>
+                    <asp:DropDownList ID="priorityDropDown" Style="margin-top: 16px" class="input_field2" runat="server">
+                        <asp:ListItem Value="">Filter By Priority...</asp:ListItem>
+                        <asp:ListItem Value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem Value="High">High</asp:ListItem>
+                        <asp:ListItem Value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem Value="Low">Low</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div class="input-wrapper">
+
+                    <asp:DropDownList ID="completedTaskDropDown" Style="margin-top: 16px" class="input_field2" runat="server">
+                        <asp:ListItem Value="">Filter by Task Completion...</asp:ListItem>
+                        <asp:ListItem Value="Completed">Completed Task</asp:ListItem>
+                        <asp:ListItem Value="Not Completed">Not Completed Task</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <asp:Button type="button" CssClass="filter-button" Text="Search" OnClick="searchTaskClick" runat="server" />
@@ -70,19 +78,19 @@
                     <h1>
                         <center>View All Task</center>
                     </h1>
-                    <span runat="server" class="table-row-count" ID="tableRowCount"></span>
+                    <span runat="server" class="table-row-count" id="tableRowCount"></span>
                 </caption>
                 <thead>
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
                         <th>Start Date</th>
-                        <th>Time</th>
+                        <th>End Time</th>
                         <th>Location</th>
                         <th>Category</th>
                     </tr>
                 </thead>
-                <tbody runat="server" ID="taskRows">
+                <tbody runat="server" id="taskRows">
                     <!-- rows are generated -->
                 </tbody>
             </table>

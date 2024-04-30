@@ -54,42 +54,50 @@
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
-                        ID="date"
-                        type="date"
-                        name="date"
+                        ID="startdate"
+                        type="datetime-local"
+                        name="startdate"
                         placeholder="Date"
                         CssClass="input_field"
                         runat="server" />
-                    <label for="date" class="input_label">Date<span style="color: red"> *</span></label>
+                    <label for="date" class="input_label">Start Date<span style="color: red"> *</span></label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
-                        ID="time"
-                        type="time"
-                        name="time"
-                        placeholder="Time"
-                        title="The Time the task should be completed"
+                        ID="enddate"
+                        type="datetime-local"
+                        name="enddate"
+                        placeholder="End Date"
                         CssClass="input_field"
                         runat="server" />
-                    <label for="time" class="input_label">Time</label>
+                    <label for="date" class="input_label">End Date<span style="color: red"> *</span></label>
                 </div>
                 <br />
                 <div class="input-wrapper">
 
                     <asp:DropDownList ID="priorityDropDown" class="input_field" runat="server">
-                        <asp:ListItem value="">Set priority...</asp:ListItem>
-                        <asp:ListItem value="Urgent">Urgent</asp:ListItem>
-                        <asp:ListItem value="High">High</asp:ListItem>
-                        <asp:ListItem value="Medium">Medium</asp:ListItem>
-                        <asp:ListItem value="Low">Low</asp:ListItem>
+                        <asp:ListItem Value="">Set priority...</asp:ListItem>
+                        <asp:ListItem Value="Urgent">Urgent</asp:ListItem>
+                        <asp:ListItem Value="High">High</asp:ListItem>
+                        <asp:ListItem Value="Medium">Medium</asp:ListItem>
+                        <asp:ListItem Value="Low">Low</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <br />
                 <div class="input-wrapper">
-
                     <asp:DropDownList ID="categoryDropDown" class="input_field" runat="server"></asp:DropDownList>
                 </div>
                 <br>
+                <div class="input_wrapper">
+                    <asp:TextBox
+                        ID="remindertime"
+                        type="datetime-local"
+                        name="reminderdatetime"
+                        placeholder="Reminder Date and Time"
+                        CssClass="input_field"
+                        runat="server" />
+                    <label for="date" class="input_label">Reminder Date and Time</label>
+                </div>
                 <br>
                 <asp:Button type="button" CssClass="create-button" Text="Create Task" OnClick="createTask_Click" runat="server" />
 
