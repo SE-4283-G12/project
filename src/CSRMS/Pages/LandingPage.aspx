@@ -22,7 +22,7 @@
             <table>
                 <caption>
                     <h1>
-                        <center>Today's Task</center>
+                        <center>Upcoming Task</center>
                     </h1>
                     <span runat="server" class="table-row-count" id="tableRowCount"></span>
                 </caption>
