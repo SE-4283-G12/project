@@ -24,12 +24,12 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tablerowcontent;
 
         /// <summary>
-        /// taskRows control.
+        /// categoryRows control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl taskRows;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl categoryRows;
     }
 }

@@ -92,10 +92,16 @@ namespace CSRMS.Models.AccountModel
            return DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
         }
 
+        public List<Category> getAllUserAccountCategories()
+        {
+            return DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
+        }
+
         public static void login()
         {
             // set session values
             HttpContext.Current.Session["UserTasks"] = ((UserAccount)HttpContext.Current.Session["UserAccount"]).getAllUserAccountTasks();
+            HttpContext.Current.Session["UserCategories"] = ((UserAccount)HttpContext.Current.Session["UserAccount"]).getAllUserAccountCategories();
         }
 
         public static void signOut()

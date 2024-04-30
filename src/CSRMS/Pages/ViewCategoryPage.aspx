@@ -29,10 +29,10 @@
                 <thead>
                     <tr>
                         <th>Category Name</th>
-                        <th>Completion Percentage</th>
+                        <%--<th>Completion Percentage</th>--%>
                     </tr>
                 </thead>
-                <tbody runat="server" ID="taskRows">
+                <tbody runat="server" ID="categoryRows">
                     <!--? rows are generated -->
                 </tbody>
             </table>

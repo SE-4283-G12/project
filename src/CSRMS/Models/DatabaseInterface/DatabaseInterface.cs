@@ -238,6 +238,45 @@ namespace CSRMS.Models.DatabaseInterface
             return categoryName;
         }
 
+        // GetAllUserAccountCategories
+        public static List<Category> GetAllUserAccountCategories(string emailAddress)
+        {
+            List<Category> categories = new List<Category>();
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CSRMSConnectionString"].ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("GetAllUserAccountCategories", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@email", emailAddress);
+
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            int categoryId = Convert.ToInt32(reader["category_id"]);
+                            string categoryName = Convert.ToString(reader["name"]);
+
+                            Category category = new Category(categoryId, categoryName);
+                            categories.Add(category);
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error retrieving categories: " + ex.Message);
+                        // Handle exception
+                    }
+                }
+            }
+
+            return categories;
+        }
+
         // UpdateCategory
         public static void UpdateCategory(int categoryId, string newName)
         {

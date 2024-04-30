@@ -24,15 +24,6 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.TextBox taskname;
 
         /// <summary>
-        /// location control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox location;
-
-        /// <summary>
         /// startdate control.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace CSRMS.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox enddate;
+
+        /// <summary>
+        /// location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox location;
 
         /// <summary>
         /// priorityDropDown control.
@@ -69,12 +69,12 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.DropDownList categoryDropDown;
 
         /// <summary>
-        /// remindertime control.
+        /// description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox remindertime;
+        protected global::System.Web.UI.WebControls.TextBox description;
     }
 }
