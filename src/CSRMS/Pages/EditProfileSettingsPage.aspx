@@ -27,7 +27,7 @@
             <div class="container" style="width: 600px">
             <h2>
                 <center>
-                  <i class="fa-solid fa-user-plus"style="color: #333333;""></i>
+                  <i class="fa-solid fa-user-plus"style="color: #333333;"></i>
                     Edit Profile
                 </center>
             </h2>
@@ -50,7 +50,6 @@
                         <label for="firstname" class="input_label">First Name</label>
                     </div>
                     </div>
-                <div class="input-container">
                     <div class="input_wrapper">
                         <asp:TextBox
                             id="lastname"
@@ -59,12 +58,10 @@
                             placeholder="Last Name (required)"
                             title="Input Last Name"
                             CssClass="input_field2"
-                            style ="width: 100%"
                             runat="server"/>
                         <label for="lastname" class="input_label">Last Name</label>
                     </div>
 
-                </div>
                 <div class="input_wrapper">
                     <h4 style="text-align:left; color:var(--clr-header-1)">Please click below check box to update password</h4>
                     <input type="checkbox" id="passwordCheckbox" onclick="togglePasswordFields()" style="transform: scale(1.5);" />
