@@ -24,6 +24,8 @@
             <div class="table-container">
                 <div style="border-right: 2px solid var(--clr-border-1); padding-right: 20px">
                     <h2 style="margin-top: 22px; padding-bottom: 15px; border-block-end: 2px solid var(--clr-border-1);">Add Category</h2>
+                                    <asp:Label runat="server" ID="errorMessage" CssClass="error_message_label hidden" Text="Username or Password is incorrect"></asp:Label>
+
                     <div class="input_wrapper">
                         <asp:TextBox
                             ID="categoryname"

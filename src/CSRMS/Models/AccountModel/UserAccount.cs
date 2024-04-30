@@ -117,7 +117,16 @@ namespace CSRMS.Models.AccountModel
             if(lastName == "") lastName = this.lastName;
             if (password == "") password = this.password;
             DatabaseInterface.DatabaseInterface.UpdateUserAccount(this.emailAddress, firstName, lastName, password);
-            resetUserAccountSessionData();
+        }
+
+        public void createNewUserAccountCategory(string categoryName)
+        {
+            DatabaseInterface.DatabaseInterface.CreateCategory(categoryName, this.emailAddress);
+        }
+
+        public void resetUserCategoriesData()
+        {
+            HttpContext.Current.Session["UserCategories"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
         }
 
         public void resetUserAccountSessionData()

@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CSRMS.Models.AccountModel;
 using CSRMS.Models.EventModel;
 
 namespace CSRMS.Pages
@@ -13,7 +14,11 @@ namespace CSRMS.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            setCategoriesTable();
+            if (!Page.IsPostBack)
+            {
+                ViewState["ErrorMessage"] = "";
+                setCategoriesTable();
+            }
         }
         public void setCategoriesTable()        // Display each of a users Categories
         {
@@ -50,8 +55,38 @@ namespace CSRMS.Pages
         }
         protected void creatcategory_Click(object sender, EventArgs e)      // Create new user category
         {
-            System.Diagnostics.Debug.WriteLine("Task button clicked");
+            if (categoryname.Text.Length > 0 && isNewCategoryUnique(categoryname.Text))
+            {
+                ((UserAccount)HttpContext.Current.Session["UserAccount"]).createNewUserAccountCategory(categoryname.Text);
+                ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserCategoriesData();
+                setCategoriesTable();
+            }
+            else
+            {
+                ViewState["ErrorMessage"] = "Invalid Category Name";
+            }
+            errorCheck();
+        }
 
+        public bool isNewCategoryUnique(string newCategoryName)
+        {
+            // check all existing categorys
+            List<Category> categories = ((List<Category>)HttpContext.Current.Session["UserCategories"]);
+            foreach (Category category in categories)
+            {
+                if (category.getName() == newCategoryName) return false;
+            }
+            return true;
+        }
+
+        public void errorCheck()
+        {
+            if (ViewState["ErrorMessage"].ToString() == "Invalid Category Name")
+            {
+                // Display Error Message
+                errorMessage.Text = ViewState["ErrorMessage"].ToString();
+                errorMessage.CssClass = "error_message_label";
+            }
         }
 
         protected void TableRowClicked(object sender, EventArgs e)
