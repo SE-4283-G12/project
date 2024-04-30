@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="../Public/Styles/forms.css">
     </head>
     <body>
-        <div class="table-widget">
+        <div class="table-widget" style="min-width:650px">
             <div class="filter-container" style="margin-bottom: 5em; width: 95%">
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -71,6 +71,7 @@
                         <asp:ListItem Value="Not Completed">Not Completed Task</asp:ListItem>
                     </asp:DropDownList>
                 </div>
+                <div></div>
                 <asp:Button type="button" CssClass="filter-button" Text="Search" OnClick="searchTaskClick" runat="server" />
             </div>
             <table>

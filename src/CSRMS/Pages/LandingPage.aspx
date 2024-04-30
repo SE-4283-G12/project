@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="../Public/Styles/table.css">
     </head>
     <body>
-        <div class="table-widget">
+        <div class="table-widget" style="min-width:500px">
             <table>
                 <caption>
                     <h1>

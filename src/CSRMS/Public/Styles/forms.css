@@ -148,7 +148,7 @@ place-items: center;
 
 .filter-container {
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-columns: repeat(3, 2fr);
     margin-bottom: 2em;
     width: 95%;
 }
