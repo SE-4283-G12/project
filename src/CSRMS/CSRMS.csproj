@@ -120,6 +120,7 @@
     <Content Include="Pages\ViewCategoryPage.aspx" />
     <Content Include="Public\Images\eye-off.svg" />
     <Content Include="Public\Images\eye.svg" />
+    <Content Include="Public\Scripts\AddTaskPage.js" />
     <Content Include="Public\Scripts\categoryTable.js" />
     <Content Include="Public\Scripts\loginInput.js" />
     <Content Include="Public\Scripts\dashboardtable.js" />

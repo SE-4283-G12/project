@@ -84,22 +84,12 @@
                 </div>
                 <br />
                 <div class="input-wrapper">
-                    <asp:ListBox ID="categoryListbox" ToolTip="Shift click to select multiple, Control click to remove reminders" class="input_field" SelectionMode="multiple" runat="server">
+                    <asp:ListBox ID="categoryListbox" ToolTip="Shift click to select multiple categories, Control click to remove categories" class="input_field" SelectionMode="multiple" runat="server">
                         <asp:ListItem Value="">Select a Category...</asp:ListItem>
                         <asp:ListItem Value="A">A</asp:ListItem>
                         <asp:ListItem Value="B">B</asp:ListItem>
                     </asp:ListBox>
                 </div>
-                <%--<div class="input_wrapper">
-                    <asp:TextBox
-                        ID="remindertime"
-                        type="datetime-local"
-                        name="reminderdatetime"
-                        placeholder="Reminder Date and Time"
-                        CssClass="input_field"
-                        runat="server" />
-                    <label for="date" class="input_label">Reminder Date and Time</label>
-                </div>--%>
                 <div class="input_wrapper">
                     <asp:TextBox
                         ID="description"
@@ -111,11 +101,25 @@
                         runat="server" />
                     <label for="taskname" class="input_label">Task Description</label>
                 </div>
-                <br>
+                <div class="input_wrapper">
+                    <h4 style="text-align: left; color: var(--clr-header-1)">Enable Reminders</h4>
+                    <input type="checkbox" ID="remindercheckbox" Style="transform: scale(1.5);" OnClick="toggleReminderField()" />
+                </div>
+                <br />
+                <div class="input-wrapper" id="reminder" >
+                    <asp:ListBox ID="reminderlistbox" ToolTip="Shift click to select multiple reminders, Control click to remove reminders" class="input_field" SelectionMode="multiple" runat="server">
+                        <asp:ListItem Value="">Never</asp:ListItem>
+                        <asp:ListItem Value="One Hour Prior">One Hour Prior</asp:ListItem>
+                        <asp:ListItem Value="One Day Prior">One Day Prior</asp:ListItem>
+                        <asp:ListItem Value="One Week Prior">One Week Prior</asp:ListItem>
+                    </asp:ListBox>
+                </div>
+                <br />
                 <asp:Button type="button" CssClass="create-button" Text="Create Task" OnClick="createTask_Click" runat="server" />
 
             </div>
         </main>
+        <script src="../Public/Scripts/AddTaskPage.js"></script>
     </body>
     </html>
 </asp:Content>
