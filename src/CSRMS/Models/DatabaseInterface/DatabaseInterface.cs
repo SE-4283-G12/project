@@ -339,7 +339,7 @@ namespace CSRMS.Models.DatabaseInterface
 
         // Task Storage Procedures
         // CreateTask
-        public static void CreateTask(string title, bool isComplete, DateTime startDate, DateTime dueDate, string email, string location, int priority, string description)
+        public static void CreateTask(string title, bool isComplete, DateTime startDate, DateTime dueDate, string email, string location, int? priority, string description)
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CSRMSConnectionString"].ConnectionString))
             {
@@ -354,7 +354,7 @@ namespace CSRMS.Models.DatabaseInterface
                     command.Parameters.Add("@due_date", SqlDbType.DateTime).Value = dueDate;
                     command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                     command.Parameters.Add("@location", SqlDbType.VarChar).Value = location;
-                    command.Parameters.Add("@priority", SqlDbType.Int).Value = priority;
+                    command.Parameters.Add("@priority", SqlDbType.Int).Value = (object)priority ?? DBNull.Value;
                     command.Parameters.Add("@description", SqlDbType.Text).Value = description;
 
                     try

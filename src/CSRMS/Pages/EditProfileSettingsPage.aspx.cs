@@ -58,13 +58,13 @@ namespace CSRMS.Pages
             if (firstname.Text.Length > 0 && lastname.Text.Length > 0)
             {
                 changeUsersName(firstname.Text, lastname.Text);
-                ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserAccountSessionData();
+                ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserAccountData();
                 isChangeMade = true;
             }
             if (passwordNew.Text == passwordConfirm.Text && passwordNew.Text.Length > 0)
             {
                 changePassword(passwordNew.Text);
-                ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserAccountSessionData();
+                ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserAccountData();
                 passwordNew.Text = "";
                 passwordConfirm.Text = "";
                 ViewState["ErrorMessage"] = "";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using CSRMS.Models.EventModel;
 using Microsoft.Ajax.Utilities;
@@ -124,6 +125,18 @@ namespace CSRMS.Models.AccountModel
             DatabaseInterface.DatabaseInterface.CreateCategory(categoryName, this.emailAddress);
         }
 
+        public void createNewUserAccountTask(string title, DateTime startDate, DateTime dueDate, string location, int? priority, string description)
+        {
+            DatabaseInterface.DatabaseInterface.CreateTask(title, false, startDate, dueDate, this.emailAddress, location, priority, description);
+
+        }
+
+        public void addCategoriesToUserAccountTask(int task_id, List<Category> categories)
+        {
+            foreach (Category category in categories)
+                DatabaseInterface.DatabaseInterface.CreateTaskCategory(task_id, category.getId());
+        }
+
         public static void editUserAccountCateogry(string oldCategoryName, string newCategoryName)
         {
 
@@ -137,14 +150,24 @@ namespace CSRMS.Models.AccountModel
             }
         }
 
+        public void addReminderToUserAccountTask(int task_id, string taskTitle, DateTime dueDate, DateTime time)
+        {
+            DatabaseInterface.DatabaseInterface.CreateReminder(task_id, taskTitle + " due " + dueDate.ToString(), time, "email");
+        }
+
         public void resetUserCategoriesData()
         {
             HttpContext.Current.Session["UserCategories"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
         }
 
-        public void resetUserAccountSessionData()
+        public void resetUserAccountData()
         {
             HttpContext.Current.Session["UserAccount"] = DatabaseInterface.DatabaseInterface.GetUserAccount(this.emailAddress);
+        }
+
+        public void resetUserTasksData()
+        {
+            HttpContext.Current.Session["UserTasks"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
         }
 
         public void deleteAccount()
