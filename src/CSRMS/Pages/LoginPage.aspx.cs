@@ -22,6 +22,15 @@ namespace CSRMS.Pages
 
                 // clear old sessions
                 UserAccount.signOut();
+
+                //DatabaseInterface.CreateTask("Go To Wedding", false, DateTime.Now.AddDays(1), DateTime.Now.AddDays(1), "test@gmail.com", "jail", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Shop", false, DateTime.Now.AddDays(2), DateTime.Now.AddDays(2), "test@gmail.com", "School", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Reststop", false, DateTime.Now.AddDays(2), DateTime.Now.AddDays(2), "test@gmail.com", "Hospital", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Meal", false, DateTime.Now.AddDays(3), DateTime.Now.AddDays(3), "test@gmail.com", "Airport", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Event", false, DateTime.Now.AddDays(3), DateTime.Now.AddDays(4), "test@gmail.com", "Walmart", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Party", false, DateTime.Now.AddDays(4), DateTime.Now.AddDays(5), "test@gmail.com", "Tjmax", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Birthday Bash", false, DateTime.Now.AddDays(8), DateTime.Now.AddDays(9), "test@gmail.com", "Some location", (int)Priority.Urgent, "No Description");
+                //DatabaseInterface.CreateTask("Go To Okctechhelp.com", false, DateTime.Now.AddDays(8), DateTime.Now.AddDays(19), "test@gmail.com", "Another location", (int)Priority.Urgent, "No Description");
             }
         }
 

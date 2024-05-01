@@ -88,10 +88,5 @@ namespace CSRMS.Pages
                 errorMessage.CssClass = "error_message_label";
             }
         }
-
-        protected void TableRowClicked(object sender, EventArgs e)
-        {
-            Response.Redirect("EditCategoryPage.aspx"); 
-        }
     }
 }

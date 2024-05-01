@@ -64,8 +64,11 @@
                 var rows = document.querySelectorAll("table tr[runat='server']");
                 rows.forEach(function (row) {
                     row.addEventListener("click", function () {
-                        // Redirect to the EditCategoryPage.aspx
-                        window.location.href = "EditCategoryPage.aspx";
+                        // Get the category name from the clicked row
+                        var categoryName = row.cells[0].innerText.trim(); // Assuming the category name is in the first column
+
+                        // Redirect to the EditCategoryPage.aspx with the category name as a query parameter
+                        window.location.href = "EditCategoryPage.aspx?categoryName=" + encodeURIComponent(categoryName);
                     });
                 });
             });

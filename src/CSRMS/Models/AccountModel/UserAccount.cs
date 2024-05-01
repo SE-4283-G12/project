@@ -124,6 +124,19 @@ namespace CSRMS.Models.AccountModel
             DatabaseInterface.DatabaseInterface.CreateCategory(categoryName, this.emailAddress);
         }
 
+        public static void editUserAccountCateogry(string oldCategoryName, string newCategoryName)
+        {
+
+            foreach (Category category in HttpContext.Current.Session["UserCategories"] as List<Category>)
+            {
+                if (category.getName() == oldCategoryName)
+                {
+                    DatabaseInterface.DatabaseInterface.UpdateCategory(category.getId(), newCategoryName, ((UserAccount)HttpContext.Current.Session["UserAccount"]).getEmailAddress());
+                    return;
+                }
+            }
+        }
+
         public void resetUserCategoriesData()
         {
             HttpContext.Current.Session["UserCategories"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
@@ -138,6 +151,8 @@ namespace CSRMS.Models.AccountModel
         {
             DatabaseInterface.DatabaseInterface.DeleteUserAccount(this.emailAddress);
         }
+
+
 
     }
 }

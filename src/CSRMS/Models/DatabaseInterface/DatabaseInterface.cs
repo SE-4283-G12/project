@@ -283,7 +283,7 @@ namespace CSRMS.Models.DatabaseInterface
         }
 
         // UpdateCategory
-        public static void UpdateCategory(int categoryId, string newName)
+        public static void UpdateCategory(int categoryId, string newName, string email)
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CSRMSConnectionString"].ConnectionString))
             {
@@ -294,6 +294,7 @@ namespace CSRMS.Models.DatabaseInterface
                     // Add parameters
                     command.Parameters.Add("@category_id", SqlDbType.Int).Value = categoryId;
                     command.Parameters.Add("@name", SqlDbType.VarChar).Value = newName;
+                    command.Parameters.Add("@emailAddress", SqlDbType.VarChar).Value = email;
 
                     try
                     {

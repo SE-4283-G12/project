@@ -23,6 +23,8 @@
         <div class="container" style="width: 35%">
             <i class="fa-solid fa-arrow-left fa-2xl" style="cursor: pointer;" title="back to categories" onclick="CategoriesBack()"></i>
             <h2>Edit Category</h2>
+                                                <asp:Label runat="server" ID="errorMessage" CssClass="error_message_label hidden" Text="Username or Password is incorrect"></asp:Label>
+
             <div class="input_wrapper">
                 <asp:TextBox
                     ID="categoryname"
