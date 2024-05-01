@@ -18,30 +18,55 @@
         <link rel="stylesheet" href="../Public/Styles/table.css">
     </head>
     <body>
-        <div class="table-widget" style="min-width:500px">
-            <table>
-                <caption>
-                    <h1>
-                        <center>Upcoming Task</center>
-                    </h1>
-                    <span runat="server" class="table-row-count" id="tableRowCount"></span>
-                </caption>
-                <thead>
-                    <tr>
-                        <th>Task Name</th>
-                        <th>Priority</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Location</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody runat="server" ID="taskRows">
-                    <!--? rows are generated -->
-                </tbody>
-            </table>
+        <div class="container">
+            <div class="table-widget" style="min-width: 500px">
+                <table>
+                    <caption>
+                        <h1>
+                            <center>Today's Task</center>
+                        </h1>
+                        <span runat="server" class="table-row-count" id="tableRowCount"></span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Priority</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody runat="server" title="Edit Task" id="taskRows">
+                        <!--? rows are generated -->
+                    </tbody>
+                </table>
+            </div>
+            <br />
+            <div class="table-widget" style="min-width: 500px">
+                <table>
+                    <caption>
+                        <h1>
+                            <center> Upcoming Task</center>
+                        </h1>
+                        <span runat="server" class="table-row-count" id="upcomingTableRowCount"></span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Priority</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody runat="server" title="Edit Task" id="upcomingTaskRows">
+                        <!--? rows are generated -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-
         <script src="../Public/Scripts/dashboardtable.js"></script>
 
 

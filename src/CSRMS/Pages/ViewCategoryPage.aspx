@@ -51,7 +51,7 @@
                             <%--<th>Completion Percentage</th>--%>
                         </tr>
                     </thead>
-                    <tbody runat="server" id="categoryRows">
+                    <tbody runat="server" title="Edit Category" id="categoryRows">
                         <!--? rows are generated -->
                     </tbody>
                 </table>
