@@ -35,6 +35,7 @@
                             <th>End Time</th>
                             <th>Location</th>
                             <th>Category</th>
+                            <th>Task Completed</th>
                         </tr>
                     </thead>
                     <tbody runat="server" title="Edit Task" id="taskRows">
@@ -59,6 +60,7 @@
                             <th>End Time</th>
                             <th>Location</th>
                             <th>Category</th>
+                            <th>Task Completed</th>
                         </tr>
                     </thead>
                     <tbody runat="server" title="Edit Task" id="upcomingTaskRows">
