@@ -74,7 +74,7 @@ namespace CSRMS.Pages
             {
                 if (category.getName() == ViewState["categoryName"].ToString())
                 {
-                    UserAccount.deleteTaskCategory(category.getId());
+                    UserAccount.deleteCategory(category.getId());
                     ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserCategoriesData();
                     ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
                     Response.Redirect("ViewAllTaskPage.aspx");
