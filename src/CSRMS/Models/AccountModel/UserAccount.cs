@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using CSRMS.Models.EventModel;
+using CSRMS.Models.DatabaseInterface;
 using Microsoft.Ajax.Utilities;
 
 namespace CSRMS.Models.AccountModel
@@ -82,8 +83,7 @@ namespace CSRMS.Models.AccountModel
             return true;
         }
 
-        // using as create new account
-        public static void storeCredentials(string email, string firstName, string lastName, string password)
+        public static void createAccount(string email, string firstName, string lastName, string password)
         {
             DatabaseInterface.DatabaseInterface.CreateAccount(email, firstName, lastName, password);
         }
