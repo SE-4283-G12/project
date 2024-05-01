@@ -98,6 +98,11 @@ namespace CSRMS.Models.AccountModel
             return DatabaseInterface.DatabaseInterface.GetAllUserAccountCategories(this.emailAddress);
         }
 
+        public void updateTask(Task updatedTask)
+        {
+            DatabaseInterface.DatabaseInterface.UpdateTask(updatedTask.GetTaskId(), updatedTask.GetTitle(), updatedTask.GetIsComplete(), updatedTask.GetStartDateTime(), updatedTask.GetDueDateTime(), this.emailAddress, updatedTask.GetLocation(), (int)updatedTask.GetPriority(), updatedTask.GetDescription());
+        }
+
         public static void login()
         {
             // set session values

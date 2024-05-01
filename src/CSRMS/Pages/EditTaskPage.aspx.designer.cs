@@ -15,6 +15,15 @@ namespace CSRMS.Pages
     {
 
         /// <summary>
+        /// errorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorMessage;
+
+        /// <summary>
         /// completedTask control.
         /// </summary>
         /// <remarks>
@@ -31,24 +40,6 @@ namespace CSRMS.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox taskname;
-
-        /// <summary>
-        /// startdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox startdate;
-
-        /// <summary>
-        /// enddate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox enddate;
 
         /// <summary>
         /// location control.
@@ -69,15 +60,6 @@ namespace CSRMS.Pages
         protected global::System.Web.UI.WebControls.DropDownList priorityDropDown;
 
         /// <summary>
-        /// categoryListbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox categoryListbox;
-
-        /// <summary>
         /// description control.
         /// </summary>
         /// <remarks>
@@ -85,14 +67,5 @@ namespace CSRMS.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox description;
-
-        /// <summary>
-        /// reminderlistbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox reminderlistbox;
     }
 }

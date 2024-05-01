@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using CSRMS.Models.AccountModel;
 using CSRMS.Models.DatabaseInterface;
 using CSRMS.Models.EventModel;
+using Task = CSRMS.Models.EventModel.Task;
 
 namespace CSRMS.Pages
 {
@@ -155,33 +156,36 @@ namespace CSRMS.Pages
                 if (areRemindersEnabledSelected)
                 {
                     int taskId = -1;
+                    Task userTask = new Task();
                     foreach (Models.EventModel.Task task in (HttpContext.Current.Session["UserTasks"] as List<Models.EventModel.Task>))
                     {
                         if (taskName == task.GetTitle())
                         {
-                            taskId = task.GetTaskId();
+                            userTask = task; break;
                         }
 
                     }
                     foreach (string r in reminders)
                     {
-                        DateTime timeOfReminder = DateTime.Now;
+                        
+                        DateTime timeOfReminder = userTask.GetDueDateTime();
                         switch (r)
                         {
                             case "One Hour Prior":
-                                timeOfReminder = dueDate.AddHours(1);
+                                timeOfReminder = dueDate.AddHours(-1);
                                 break;
                             case "One Day Prior":
-                                timeOfReminder = dueDate.AddDays(1);
+                                timeOfReminder = dueDate.AddDays(-1);
                                 break;
                             case "One Week Prior":
-                                timeOfReminder = dueDate.AddDays(7);
+                                timeOfReminder = dueDate.AddDays(-7);
                                 break;
                             default:
                                 // Handle unrecognized reminder
                                 break;
                         }
                         ((UserAccount)HttpContext.Current.Session["UserAccount"]).addReminderToUserAccountTask(taskId, taskname.Text, dueDate, timeOfReminder);
+                        ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
                     }
                 }
                 // redirect to view all task page

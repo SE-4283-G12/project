@@ -30,6 +30,8 @@
                     <center>
                     </center>
                 </h4>
+                                                <asp:Label runat="server" ID="errorMessage" CssClass="error_message_label hidden"></asp:Label>
+
                 <div class="input_wrapper">
                     <h3 style="text-align: left; color: var(--clr-header-1)">Mark Task Complete</h3>
                     <asp:CheckBox type="checkbox" id="completedTask" style="transform: scale(1.5);" runat="server"  />
@@ -45,7 +47,7 @@
                         runat="server" />
                     <label for="taskname" class="input_label">Task Name<span style="color: red"> *</span></label>
                 </div>
-                <div class="input_wrapper">
+                <%--<div class="input_wrapper">
                     <asp:TextBox
                         ID="startdate"
                         type="datetime-local"
@@ -64,7 +66,7 @@
                         CssClass="input_field"
                         runat="server" />
                     <label for="date" class="input_label">Due Date<span style="color: red"> *</span></label>
-                </div>
+                </div>--%>
                 <div class="input_wrapper">
                     <asp:TextBox
                         ID="location"
@@ -87,12 +89,12 @@
                     </asp:DropDownList>
                 </div>
                 <br />
-                <div class="input-wrapper">
+                <%--<div class="input-wrapper">
                     <asp:ListBox ID="categoryListbox" ToolTip="Shift click to select multiple categories, Control click to remove categories" class="input_field" SelectionMode="multiple" runat="server">
                         <asp:ListItem Value="">Select a Category...</asp:ListItem>
 
                     </asp:ListBox>
-                </div>
+                </div>--%>
                 <div class="input_wrapper">
                     <asp:TextBox
                         ID="description"
@@ -105,7 +107,7 @@
                     <label for="taskname" class="input_label">Task Description</label>
                 </div>
                 <br />
-                <div class="input-wrapper" id="reminder">
+               <%-- <div class="input-wrapper" id="reminder">
                     <h4>Reminder Frequency</h4>
                     <asp:ListBox ID="reminderlistbox" ToolTip="Shift click to select multiple reminders, Control click to remove reminders" class="input_field" SelectionMode="multiple" runat="server">
                         <asp:ListItem Value="">Never</asp:ListItem>
@@ -114,7 +116,7 @@
                         <asp:ListItem Value="One Week Prior">One Week Prior</asp:ListItem>
                     </asp:ListBox>
 
-                </div>
+                </div>--%>
                 <br />
                 <asp:Button type="button" CssClass="create-button" Text="Edit Task" OnClick="editTask_Click" runat="server" />
                 <br />

@@ -18,6 +18,10 @@ namespace CSRMS.Models.EventModel
         private List<Category> categories { get; set; }
         private List<Reminder> reminders { get; set; }
 
+        public Task()
+        {
+
+        }
         public Task(int taskId, string title, bool isComplete, DateTime dueDateTime, DateTime startDateTime, string location, string description, Priority priority, List<Category> categories, List<Reminder> reminders)
         {
             this.taskId = taskId;
