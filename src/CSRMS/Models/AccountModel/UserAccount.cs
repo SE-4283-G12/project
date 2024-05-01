@@ -83,9 +83,9 @@ namespace CSRMS.Models.AccountModel
             return true;
         }
 
-        public static void createAccount(string email, string firstName, string lastName, string password)
+        public static void createAccount(string emailAddress, string firstName, string lastName, string password)
         {
-            DatabaseInterface.DatabaseInterface.CreateAccount(email, firstName, lastName, password);
+            DatabaseInterface.DatabaseInterface.CreateAccount(emailAddress, firstName, lastName, password);
         }
 
         public List<Task> getAllUserAccountTasks()
