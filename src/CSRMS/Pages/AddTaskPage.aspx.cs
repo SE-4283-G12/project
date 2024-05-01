@@ -131,10 +131,10 @@ namespace CSRMS.Pages
                 int priority;
                 switch (priorityDropDown.SelectedItem.Text)
                 {
-                    case "Set Urgent": priority = (int)Priority.Urgent; break;
-                    case "Set High": priority = (int)Priority.High; break;
-                    case "Set Medium": priority = (int)Priority.Medium; break;
-                    case "Set Low": priority = (int)Priority.Low; break;
+                    case "Urgent": priority = (int)Priority.Urgent; break;
+                    case "High": priority = (int)Priority.High; break;
+                    case "Medium": priority = (int)Priority.Medium; break;
+                    case "Low": priority = (int)Priority.Low; break;
                     default: priority = (int)Priority.Low; break;
                 }
                 ((UserAccount)HttpContext.Current.Session["UserAccount"]).createNewUserAccountTask(taskName, startDate, dueDate, location.Text, priority, description.Text);
