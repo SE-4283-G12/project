@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditProfileSettingsPage.aspx.cs" Inherits="CSRMS.Pages.EditProfileSettingsPage" %>
+﻿<%@ Page Title="Edit Profile Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditProfileSettingsPage.aspx.cs" Inherits="CSRMS.Pages.EditProfileSettingsPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
             <div class="container" style="width: 600px">
             <h2>
                 <center>
-                  <i class="fa-solid fa-user-plus"style="color: #333333;"></i>
+                    <i class="fa-solid fa-user-pen" style="color: #333333;"></i>
                     Edit Profile
                 </center>
             </h2>

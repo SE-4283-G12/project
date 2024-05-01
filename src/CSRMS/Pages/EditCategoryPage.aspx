@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCategoryPage.aspx.cs" Inherits="CSRMS.Pages.EditCategoryPage" %>
+﻿<%@ Page Title="Edit Category Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCategoryPage.aspx.cs" Inherits="CSRMS.Pages.EditCategoryPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <!DOCTYPE html>

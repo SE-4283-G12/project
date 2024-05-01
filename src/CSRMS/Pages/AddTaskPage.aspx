@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddTaskPage.aspx.cs" Inherits="CSRMS.Pages.AddTaskPage" %>
+﻿<%@ Page Title="Add Task Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddTaskPage.aspx.cs" Inherits="CSRMS.Pages.AddTaskPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <!DOCTYPE html>
