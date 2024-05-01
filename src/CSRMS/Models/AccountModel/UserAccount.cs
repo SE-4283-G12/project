@@ -174,7 +174,10 @@ namespace CSRMS.Models.AccountModel
         {
             HttpContext.Current.Session["UserTasks"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);
         }
-
+        public static void deleteTaskCategory(int category_id)
+        {
+            DatabaseInterface.DatabaseInterface.DeleteCategory(category_id); 
+        }
         public void deleteAccount()
         {
             DatabaseInterface.DatabaseInterface.DeleteUserAccount(this.emailAddress);

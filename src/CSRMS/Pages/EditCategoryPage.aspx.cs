@@ -70,8 +70,18 @@ namespace CSRMS.Pages
 
         protected void DeleteCategoryBtn(object sender, EventArgs e)
         {
+            foreach (Category category in ((List<Category>)HttpContext.Current.Session["UserCategories"]))
+            {
+                if (category.getName() == ViewState["categoryName"].ToString())
+                {
+                    UserAccount.deleteTaskCategory(category.getId());
+                    ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserCategoriesData();
+                    ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
+                    Response.Redirect("ViewAllTaskPage.aspx");
+                    break;
+                }
+            }
 
         }
-
     }
 }
