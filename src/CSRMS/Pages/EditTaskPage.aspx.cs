@@ -175,7 +175,16 @@ namespace CSRMS.Pages
         }
         protected void DeleteTaskBtn(object sender, EventArgs e)
         {
-
+            foreach (Task task in ((List<Task>)HttpContext.Current.Session["UserTasks"]))
+            {
+                if (task.GetTitle() == Request.QueryString["taskName"].ToString())
+                {
+                    UserAccount.deleteTask(task.GetTaskId());
+                    ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
+                    Response.Redirect("ViewAllTaskPage.aspx");
+                    break;
+                }
+            }
         }
     }
 }

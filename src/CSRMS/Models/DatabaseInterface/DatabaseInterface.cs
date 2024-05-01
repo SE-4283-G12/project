@@ -152,29 +152,26 @@ namespace CSRMS.Models.DatabaseInterface
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CSRMSConnectionString"].ConnectionString))
             {
-                // Delete all Categories
-                // Delete all TaskCategoreies
-                // Delete all Reminders
-                // Delete all Tasks
+
                 // Delete account
-                //using (SqlCommand command = new SqlCommand("DeleteUserAccount", connection))
-                //{
-                //    command.CommandType = CommandType.StoredProcedure;
+                using (SqlCommand command = new SqlCommand("DeleteUserAccount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
-                //    // Add parameters
-                //    command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                    // Add parameters
+                    command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
 
-                //    try
-                //    {
-                //        connection.Open();
-                //        command.ExecuteNonQuery();
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        Debug.WriteLine("Error deleting user account: " + ex.Message);
-                //        // Handle exception
-                //    }
-                //}
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine("Error deleting user account: " + ex.Message);
+                        // Handle exception
+                    }
+                }
             }
         }
 
