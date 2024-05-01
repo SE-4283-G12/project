@@ -47,7 +47,7 @@ namespace CSRMS.Pages
                 return;
             }
 
-            UserAccount.storeCredentials(email, firstname, lastname, password);
+            UserAccount.createAccount(email, firstname, lastname, password);
             Response.Redirect("LoginPage.aspx");
 
         }
