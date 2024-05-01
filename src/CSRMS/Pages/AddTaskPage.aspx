@@ -86,8 +86,6 @@
                 <div class="input-wrapper">
                     <asp:ListBox ID="categoryListbox" ToolTip="Shift click to select multiple categories, Control click to remove categories" class="input_field" SelectionMode="multiple" runat="server">
                         <asp:ListItem Value="">Select a Category...</asp:ListItem>
-                        <asp:ListItem Value="A">A</asp:ListItem>
-                        <asp:ListItem Value="B">B</asp:ListItem>
                     </asp:ListBox>
                 </div>
                 <div class="input_wrapper">
@@ -103,10 +101,11 @@
                 </div>
                 <div class="input_wrapper">
                     <h4 style="text-align: left; color: var(--clr-header-1)">Enable Reminders</h4>
-                    <input type="checkbox" ID="remindercheckbox" Style="transform: scale(1.5);" OnClick="toggleReminderField()" />
+                    <input type="checkbox" id="remindercheckbox" style="transform: scale(1.5);" onclick="toggleReminderField()" />
                 </div>
                 <br />
-                <div class="input-wrapper" id="reminder" >
+                <div class="input-wrapper" id="reminder">
+                    <h4>Reminder Frequency</h4>
                     <asp:ListBox ID="reminderlistbox" ToolTip="Shift click to select multiple reminders, Control click to remove reminders" class="input_field" SelectionMode="multiple" runat="server">
                         <asp:ListItem Value="">Never</asp:ListItem>
                         <asp:ListItem Value="One Hour Prior">One Hour Prior</asp:ListItem>
@@ -116,7 +115,6 @@
                 </div>
                 <br />
                 <asp:Button type="button" CssClass="create-button" Text="Create Task" OnClick="createTask_Click" runat="server" />
-
             </div>
         </main>
         <script src="../Public/Scripts/AddTaskPage.js"></script>

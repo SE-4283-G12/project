@@ -82,7 +82,7 @@ namespace CSRMS.Pages
                         tableRowCount.InnerHtml = (++count).ToString();
 
                         // Generate HTML for each row
-                        rowsHtml.Append("<tr>");
+                        rowsHtml.Append("<tr OnClick=\"TableRowClicked()\" runat=\"server\">");
                         rowsHtml.Append("<td>").Append(task.GetTitle()).Append("</td>");
                         rowsHtml.Append("<td>").Append(task.GetPriority()).Append("</td>");
                         DateTime dateTime = task.GetDueDateTime();
@@ -147,7 +147,7 @@ namespace CSRMS.Pages
                     upcomingTableRowCount.InnerHtml = (++count).ToString();
 
                     // Generate HTML for each row
-                    rowsHtml.Append("<tr>");
+                    rowsHtml.Append("<tr OnClick=\"TableRowClicked()\" runat=\"server\">");
                     rowsHtml.Append("<td>").Append(task.GetTitle()).Append("</td>");
                     rowsHtml.Append("<td>").Append(task.GetPriority()).Append("</td>");
                     DateTime dateTime = task.GetDueDateTime();

@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="../Public/Styles/forms.css">
     </head>
     <body>
-        <div class="table-widget" style="min-width:650px">
+        <div class="table-widget" style="min-width: 650px">
             <div class="filter-container" style="margin-bottom: 5em; width: 95%">
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -98,6 +98,20 @@
         </div>
         <%-- </div> --%>
         <script src="../Public/Scripts/ViewAllTaskTable.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var rows = document.querySelectorAll("table tr[runat='server']");
+                rows.forEach(function (row) {
+                    row.addEventListener("click", function () {
+                        // Get the category name from the clicked row
+                        var TaskName = row.cells[0].innerText.trim(); // Assuming the Task name is in the first column
+
+                        // Redirect to the EditCategoryPage.aspx with the category name as a query parameter
+                        window.location.href = "EditTaskPage.aspx?taskName=" + encodeURIComponent(TaskName);
+                    });
+                });
+            });
+        </script>
     </body>
     </html>
 </asp:Content>

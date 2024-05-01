@@ -70,7 +70,7 @@ namespace CSRMS.Pages
                         // for each task that passes filtering we want to adjust the count of tasks for view
                         tableRowCount.InnerHtml = (++count).ToString();
                         // Generate HTML for each row
-                        rowsHtml.Append("<tr>");
+                        rowsHtml.Append("<tr OnClick=\"TableRowClicked()\" runat=\"server\">");
                         rowsHtml.Append("<td>").Append(task.GetTitle()).Append("</td>");
                         rowsHtml.Append("<td>").Append(task.GetPriority()).Append("</td>");
                         DateTime dateTime = task.GetDueDateTime();

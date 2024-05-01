@@ -47,7 +47,7 @@
                 <table>
                     <caption>
                         <h1>
-                            <center> Upcoming Task</center>
+                            <center>Upcoming Task</center>
                         </h1>
                         <span runat="server" class="table-row-count" id="upcomingTableRowCount"></span>
                     </caption>
@@ -71,7 +71,20 @@
 
 
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var rows = document.querySelectorAll("table tr[runat='server']");
+            rows.forEach(function (row) {
+                row.addEventListener("click", function () {
+                    // Get the category name from the clicked row
+                    var TaskName = row.cells[0].innerText.trim(); // Assuming the Task name is in the first column
 
+                    // Redirect to the EditCategoryPage.aspx with the category name as a query parameter
+                    window.location.href = "EditTaskPage.aspx?taskName=" + encodeURIComponent(TaskName);
+                });
+            });
+        });
+    </script>
     </html>
 </asp:Content>
 

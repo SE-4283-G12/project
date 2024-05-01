@@ -21,5 +21,14 @@ namespace CSRMS.Pages
         {
            
         }
+
+        protected void editTask_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected void DeleteTaskBtn(object sender, EventArgs e)
+        {
+
+        }
     }
 }
