@@ -40,7 +40,7 @@
                         placeholder="Start Date"
                         CssClass="input_field2"
                         runat="server" />
-                    <label for="startDate" class="input_label">Start Date</label>
+                    <label for="startDate" class="input_label">Due Date</label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
@@ -85,10 +85,11 @@
                     <tr>
                         <th>Task Name</th>
                         <th>Priority</th>
-                        <th>Start Date</th>
+                        <th>Due Date</th>
                         <th>End Time</th>
                         <th>Location</th>
                         <th>Category</th>
+                        <th>Task Completed</th>
                     </tr>
                 </thead>
                 <tbody runat="server" title="Edit Task" id="taskRows">

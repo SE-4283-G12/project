@@ -31,8 +31,8 @@
                         <tr>
                             <th>Task Name</th>
                             <th>Priority</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <th>Due Date</th>
+                            <th>End Time</th>
                             <th>Location</th>
                             <th>Category</th>
                         </tr>
@@ -55,8 +55,8 @@
                         <tr>
                             <th>Task Name</th>
                             <th>Priority</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <th>Due Date</th>
+                            <th>End Time</th>
                             <th>Location</th>
                             <th>Category</th>
                         </tr>

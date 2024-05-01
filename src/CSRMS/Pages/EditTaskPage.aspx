@@ -31,6 +31,10 @@
                     </center>
                 </h4>
                 <div class="input_wrapper">
+                    <h3 style="text-align: left; color: var(--clr-header-1)">Mark Task Complete</h3>
+                    <asp:CheckBox type="checkbox" id="completedTask" style="transform: scale(1.5);" runat="server"  />
+                </div>
+                <div class="input_wrapper">
                     <asp:TextBox
                         ID="taskname"
                         type="text"
@@ -56,10 +60,10 @@
                         ID="enddate"
                         type="datetime-local"
                         name="enddate"
-                        placeholder="End Date"
+                        placeholder="Due Date"
                         CssClass="input_field"
                         runat="server" />
-                    <label for="date" class="input_label">End Date<span style="color: red"> *</span></label>
+                    <label for="date" class="input_label">Due Date<span style="color: red"> *</span></label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox

@@ -57,10 +57,10 @@
                         ID="enddate"
                         type="datetime-local"
                         name="enddate"
-                        placeholder="End Date"
+                        placeholder="Due Date"
                         CssClass="input_field"
                         runat="server" />
-                    <label for="date" class="input_label">End Date<span style="color: red"> *</span></label>
+                    <label for="date" class="input_label">Due Date<span style="color: red"> *</span></label>
                 </div>
                 <div class="input_wrapper">
                     <asp:TextBox
