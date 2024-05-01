@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using CSRMS.Models.DatabaseInterface;
+using CSRMS.Models.EventModel;
 
 namespace CSRMS.Pages
 {
@@ -16,12 +17,18 @@ namespace CSRMS.Pages
             {
                 //TODO!!
                 // We need to get the categories from the database and store them here.
-                //List<string> dbCategories = new List<string> {"Select a Category...", "Item 1", "Item 2", "Item 3" };
+                List<string> dbCategories = new List<string> { "Select a Category..."};
+
+                // Get Categories from session data
+                foreach (Category category in Session["UserCategories"] as List<Category>)
+                {
+                    dbCategories.Add(category.getName());
+                }
 
                 //// Assign the data source to the drop-down list
-                //categoryDropDown.DataSource = dbCategories; 
+                categoryListbox.DataSource = dbCategories;
                 //// Bind the data to the drop-down list
-                //categoryDropDown.DataBind();
+                categoryListbox.DataBind();
             }
 
         }
