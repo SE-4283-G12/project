@@ -103,7 +103,7 @@ namespace CSRMS.Models.DatabaseInterface
                                 string password = reader["password"].ToString();
 
                                 // Create a UserAccount object
-                                user = new UserAccount(firstName, lastName, retrievedEmail, password);
+                                user = new UserAccount(retrievedEmail, firstName, lastName, password);
                             }
                         }
                     }

@@ -18,6 +18,7 @@ namespace CSRMS.Models.AccountModel
 
         public UserAccount(string emailAddress, string firstName, string lastName, string password)
         {
+            this.emailAddress = emailAddress;
             this.firstName = firstName;
             this.lastName = lastName;
             this.password = password;
