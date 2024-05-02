@@ -78,7 +78,7 @@ namespace CSRMS.Models.DatabaseInterface
         // Get User Account
         public static UserAccount GetUserAccount(string email)
         {
-            UserAccount user = null;
+            UserAccount user = new UserAccount(null, null, null, null);
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CSRMSConnectionString"].ConnectionString))
             {
@@ -103,7 +103,10 @@ namespace CSRMS.Models.DatabaseInterface
                                 string password = reader["password"].ToString();
 
                                 // Create a UserAccount object
-                                user = new UserAccount(retrievedEmail, firstName, lastName, password);
+                                user.setEmailAddress(retrievedEmail);
+                                user.setFirstName(firstName);
+                                user.setLastName(lastName);
+                                user.setPassword(password);
                             }
                         }
                     }

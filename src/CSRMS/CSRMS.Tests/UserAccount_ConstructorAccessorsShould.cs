@@ -3,7 +3,7 @@
 namespace CSRMS.Tests;
 
 public class UserAccount_ConstructorAccessorsShould
-{
+{ 
     [Fact]
     public void UserAccount_GetEmailAddress_ReturnEmailAddressAsString()
     {
