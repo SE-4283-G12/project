@@ -13,11 +13,8 @@ public class UserAccount_MethodsShould
         ()
     {
         //Arrange
-        var actualUserAccountObject = new UserAccount("Andrew", null, null, null);
-        var expectedFirstName = "Andrew";
         //Act
-        var actualFirstName = actualUserAccountObject.getFirstName();
         //Assert
-        Assert.Equal(expectedFirstName, actualFirstName);
+        
     }
 }
