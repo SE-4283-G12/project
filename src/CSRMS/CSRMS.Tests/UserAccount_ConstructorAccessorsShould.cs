@@ -1,20 +1,26 @@
-﻿using Xunit;
-using CSRMS.Models.AccountModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSRMS.Models.AccountModel;
 
 namespace CSRMS.Tests;
 
-public class UserAccount_ConstructorShould
+public class UserAccount_ConstructorAccessorsShould
 {
+    [Fact]
+    public void UserAccount_GetEmailAddress_ReturnEmailAddressAsString()
+    {
+        //Arrange
+        var actualUserAccountObject = new UserAccount("ahudson14@uco.edu", null, null, null);
+        var expectedEmailAddress = "ahudson14@uco.edu";
+        //Act
+        var actualEmailAddress = actualUserAccountObject.getEmailAddress();
+        //Assert
+        Assert.Equal(expectedEmailAddress, actualEmailAddress);
+    }
+
     [Fact]
     public void UserAccount_GetFirstName_ReturnFirstNameAsString()
     {
         //Arrange
-        var actualUserAccountObject = new UserAccount("Andrew", null, null, null);
+        var actualUserAccountObject = new UserAccount(null, "Andrew", null, null);
         var expectedFirstName = "Andrew";
         //Act
         var actualFirstName = actualUserAccountObject.getFirstName();
@@ -26,24 +32,12 @@ public class UserAccount_ConstructorShould
     public void UserAccount_GetLastName_ReturnLastNameAsString()
     {
         //Arrange
-        var actualUserAccountObject = new UserAccount(null, "Hudson", null, null);
+        var actualUserAccountObject = new UserAccount(null, null, "Hudson", null);
         var expectedLastName = "Hudson";
         //Act
         var actualLastName = actualUserAccountObject.getLastName();
         //Assert
         Assert.Equal(expectedLastName, actualLastName);
-    }
-
-    [Fact]
-    public void UserAccount_GetPassword_ReturnEmailAddressAsString()
-    {
-        //Arrange
-        var actualUserAccountObject = new UserAccount(null, null, "ahudson14@uco.edu", null);
-        var expectedEmailAddress = "ahudson14@uco.edu";
-        //Act
-        var actualEmailAddress = actualUserAccountObject.getEmailAddress();
-        //Assert
-        Assert.Equal(expectedEmailAddress, actualEmailAddress);
     }
 
     [Fact]

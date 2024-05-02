@@ -16,11 +16,10 @@ namespace CSRMS.Models.AccountModel
         private string lastName { get; set; }
         private string password { get; set; }
 
-        public UserAccount(string firstName, string lastName, string emailAddress, string password)
+        public UserAccount(string emailAddress, string firstName, string lastName, string password)
         {
             this.firstName = firstName;
             this.lastName = lastName;
-            this.emailAddress = emailAddress;
             this.password = password;
         }
 
