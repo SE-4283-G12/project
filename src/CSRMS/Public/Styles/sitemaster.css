@@ -1,0 +1,229 @@
+﻿/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+===============
+Variables
+===============
+*/
+
+:root {
+    /*WhiteSmoke - background*/
+    --clr-background-1: hsl(0, 0%, 96%);
+    /* dark blue - Header/Footer Color  */
+    --clr-header-1: hsl(207, 44%, 20%);
+    /*CHARCOL GREY - Text and Icons*/
+    --clr-text-1: hsl(0,0%,20%);
+    /*Soft Blue - selected items/active buttons elements*/
+    --clr-accent-1: hsl(204, 70%, 63%);
+    /*Subdued Green - Completed Task */
+    --clr-accent-2: hsl(146, 45%, 65%);
+    /*LIGHT GREY - Borders/dividers */
+    --clr-border-1: hsl(207, 44%, 49%);
+    /*Teal - Notifications*/
+    --clr-notifications-1: hsl(180, 100%, 25%);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 20rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --gap: 0.5rem;
+    --item-width: 5.25 rem;
+}
+
+/*
+==============
+Global Styles 
+==============
+*/
+::after,
+::before {
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    color: var(--clr-text-1);
+    line-height: 1.5;
+    font-size: .75rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+    color: var(--clr-header-1);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: .75rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    grid-area: head;
+}
+
+article {
+    grid-area: content;
+}
+
+aside {
+    grid-area: side;
+}
+
+footer {
+    grid-area: foot;
+}
+
+
+/*
+==========
+Logan Additions
+==========
+*/
+
+/*
+==========
+Container
+==========
+*/
+
+.row.nav-bar {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.row.main-content {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    margin-top: 5em;
+    justify-content: center;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+/*
+==========
+End of Logan Additions
+==========
+*/
+
+/*
+    containers
+*/
+
+.navigation {
+    display: flex;
+    width: 600px;
+    background: var(--clr-background-1);
+    box-shadow: 0px 4px 16px 0px;
+    border-radius: 1rem;
+    border: 1px 1rem var(--clr-border-1);
+    user-select: none;
+    text-align: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    gap: 3rem;
+    text-align: center;
+}
+
+    .nav-list > li > {
+        width: 5.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .nav-list > li > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 4rem;
+            gap: 0.5rem;
+            width: 100%;
+            color: var(--clr-text-1);
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+    .nav-list > a > svg {
+        width: 1rem;
+        height: 1rem;
+        stroke: var(--clr-notifications-1);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav-list > li:hover > a {
+        color: var(--clr-accent-1);
+    }
+
+        .nav-list > li:hover > a > svg {
+            stroke: var(--clr-accent-1);
+        }
+
+.active-bar {
+    position: absolute;
+    top: -1rem;
+    min-width: var(--item-width);
+    height: 0.5rem;
+    background: var(--primary);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.nav-list li:nth-child(1).active ~ .active-bar {
+    transform: translatex(calc(0));
+}
+
+.nav-list li:nth-child(2).active ~ .active-bar {
+    transform: translatex(calc(var(--item-width) + var(--gap)));
+}
+
+.nav-list li:nth-child(3).active ~ .active-bar {
+    transform: translatex(calc(var(--item-width)*2 + var(--gap)*2));
+}

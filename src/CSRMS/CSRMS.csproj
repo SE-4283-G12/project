@@ -110,14 +110,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddTaskPage.aspx" />
-    <Content Include="Pages\CreateAccountPage.aspx" />
+    <Content Include="Pages\CreateUser.aspx" />
+    <Content Include="Pages\EditCategoryPage.aspx" />
     <Content Include="Pages\EditProfileSettingsPage.aspx" />
     <Content Include="Pages\EditTaskPage.aspx" />
-    <Content Include="Pages\LandingPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Pages\LandingPage.aspx" />
     <Content Include="Pages\LoginPage.aspx" />
     <Content Include="Pages\ViewAllTaskPage.aspx" />
-    <Content Include="public\styles\styles.css" />
+    <Content Include="Pages\ViewCategoryPage.aspx" />
+    <Content Include="Public\Images\eye-off.svg" />
+    <Content Include="Public\Images\eye.svg" />
+    <Content Include="Public\Scripts\AddTaskPage.js" />
+    <Content Include="Public\Scripts\categoryTable.js" />
+    <Content Include="Public\Scripts\loginInput.js" />
+    <Content Include="Public\Scripts\dashboardtable.js" />
+    <Content Include="Public\Scripts\ViewAllTaskTable.js" />
+    <Content Include="Public\Styles\sitemaster.css" />
+    <Content Include="Public\Styles\forms.css" />
+    <Content Include="Public\Styles\table.css" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -125,18 +136,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Models\AccountModel\AccountBuilder.cs" />
-    <Compile Include="Models\AccountModel\AccountDirector.cs" />
-    <Compile Include="Models\AccountModel\AdministratorAccount.cs" />
-    <Compile Include="Models\AccountModel\AdministratorAccountBuilder.cs" />
     <Compile Include="Models\AccountModel\UserAccount.cs" />
-    <Compile Include="Models\AccountModel\UserAccoutnBuilder.cs" />
-    <Compile Include="Models\Controllers\AccountController.cs" />
-    <Compile Include="Models\Controllers\EventsController.cs" />
-    <Compile Include="Models\Controllers\LandingController.cs" />
-    <Compile Include="Models\Controllers\LoginController.cs" />
     <Compile Include="Models\EventModel\Category.cs" />
     <Compile Include="Models\EventModel\EmailReminderImplementation.cs" />
+    <Compile Include="Models\EventModel\Filter.cs" />
+    <Compile Include="Models\EventModel\Priority.cs" />
     <Compile Include="Models\EventModel\Reminder.cs" />
     <Compile Include="Models\EventModel\ReminderImplementation.cs" />
     <Compile Include="Models\EventModel\Task.cs" />
@@ -151,12 +155,19 @@
     <Compile Include="Pages\AddTaskPage.aspx.designer.cs">
       <DependentUpon>AddTaskPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreateAccountPage.aspx.cs">
-      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+    <Compile Include="Pages\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\CreateAccountPage.aspx.designer.cs">
-      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+    <Compile Include="Pages\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditCategoryPage.aspx.cs">
+      <DependentUpon>EditCategoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditCategoryPage.aspx.designer.cs">
+      <DependentUpon>EditCategoryPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditProfileSettingsPage.aspx.cs">
       <DependentUpon>EditProfileSettingsPage.aspx</DependentUpon>
@@ -172,15 +183,15 @@
     <Compile Include="Pages\EditTaskPage.aspx.designer.cs">
       <DependentUpon>EditTaskPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LandingPage.aspx.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
@@ -195,6 +206,13 @@
     </Compile>
     <Compile Include="Pages\ViewAllTaskPage.aspx.designer.cs">
       <DependentUpon>ViewAllTaskPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewCategoryPage.aspx.cs">
+      <DependentUpon>ViewCategoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewCategoryPage.aspx.designer.cs">
+      <DependentUpon>ViewCategoryPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -212,7 +230,6 @@
     <Folder Include="Logs\" />
     <Folder Include="Media\Images\" />
     <Folder Include="Media\Videos\" />
-    <Folder Include="public\images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

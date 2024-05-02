@@ -2,32 +2,94 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CSRMS.Models.AccountModel;
 
 namespace CSRMS.Models.EventModel
 {
     public class Reminder
     {
         private ReminderImplementation implementation { get; set; }
-        private int id { get; set; }
-        private int taskId { get; set; }
+        private int reminderId { get; set; }
         private string message { get; set; }
-        private DateTime time { get; set; }
+        private int taskId { get; set; }
+        private DateTime reminderDateTime { get; set; }
+        private string reminderMethod { get; set; }
 
-        public Reminder(int id, int taskId, string message, DateTime time)
+        public Reminder(ReminderImplementation implementation, int reminderId, int taskId, string message, DateTime reminderDateTime, string reminderMethod)
         {
-            this.id = id;
-            implementation = null;
-            this.taskId = taskId;
+            this.implementation = null;
+            this.reminderId = reminderId;
             this.message = message;
-            this.time = time;
+            this.taskId = taskId;
+            this.reminderDateTime = reminderDateTime;
+            this.reminderMethod = reminderMethod;
         }
 
         public void setImplementation(ReminderImplementation implementation)
         {
             this.implementation = implementation;
         }
-        public void notify()
+        public void notify(string email)
         {
+            this.implementation = new EmailReminderImplementation();
+            implementation.remind(email, this);
+            UserAccount.deleteReminder(this.reminderId);
+        }
+
+        // Getter and setter functions for ReminderId
+        public int GetReminderId()
+        {
+            return reminderId;
+        }
+
+        public void SetReminderId(int value)
+        {
+            reminderId = value;
+        }
+
+        // Getter and setter functions for Message
+        public string GetMessage()
+        {
+            return message;
+        }
+
+        public void SetMessage(string value)
+        {
+            message = value;
+        }
+
+        // Getter and setter functions for TaskId
+        public int GetTaskId()
+        {
+            return taskId;
+        }
+
+        public void SetTaskId(int value)
+        {
+            taskId = value;
+        }
+
+        // Getter and setter functions for ReminderDateTime
+        public DateTime GetReminderDateTime()
+        {
+            return reminderDateTime;
+        }
+
+        public void SetReminderDateTime(DateTime value)
+        {
+            reminderDateTime = value;
+        }
+
+        // Getter and setter functions for ReminderMethod
+
+        public string GetReminderMethod()
+        {
+            return reminderMethod;
+        }
+
+        public void SetReminderMethod(string value)
+        {
+            reminderMethod = value;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CSRMS.Models.EventModel
 {
     public class TextMessageReminderImplementation : ReminderImplementation
     {
-        public new void remind()
+        public void remind()
         {
             // Send text message
         }
