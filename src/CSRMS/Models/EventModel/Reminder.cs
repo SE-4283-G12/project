@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CSRMS.Models.AccountModel;
 
 namespace CSRMS.Models.EventModel
 {
@@ -14,7 +15,7 @@ namespace CSRMS.Models.EventModel
         private DateTime reminderDateTime { get; set; }
         private string reminderMethod { get; set; }
 
-        public Reminder(int reminderId, int taskId, string message, DateTime reminderDateTime, string reminderMethod)
+        public Reminder(ReminderImplementation implementation, int reminderId, int taskId, string message, DateTime reminderDateTime, string reminderMethod)
         {
             this.implementation = null;
             this.reminderId = reminderId;
@@ -28,9 +29,11 @@ namespace CSRMS.Models.EventModel
         {
             this.implementation = implementation;
         }
-        public void notify()
+        public void notify(string email)
         {
-            implementation.remind();
+            this.implementation = new EmailReminderImplementation();
+            implementation.remind(email, this);
+            UserAccount.deleteReminder(this.reminderId);
         }
 
         // Getter and setter functions for ReminderId
@@ -88,6 +91,5 @@ namespace CSRMS.Models.EventModel
         {
             reminderMethod = value;
         }
-
     }
 }

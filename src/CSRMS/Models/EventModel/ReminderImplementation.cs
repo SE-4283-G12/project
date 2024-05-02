@@ -7,7 +7,7 @@ namespace CSRMS.Models.EventModel
 {
     public class ReminderImplementation
     {
-        public void remind()
+        public virtual void remind(string email, Reminder reminder)
         {
 
         }
