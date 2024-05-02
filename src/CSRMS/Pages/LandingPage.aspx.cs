@@ -90,6 +90,7 @@ namespace CSRMS.Pages
                         rowsHtml.Append("<td>").Append((dateTime.Hour).ToString() + ":" + (dateTime.Minute.ToString())).Append("</td>");
                         rowsHtml.Append("<td>").Append(task.GetLocation()).Append("</td>");
                         rowsHtml.Append("<td>").Append(string.Join(", ", task.GetCategories().Select(c => c.getName()))).Append("</td>");
+                        rowsHtml.Append("<td>").Append(task.GetIsComplete()).Append("</td>");
                         rowsHtml.Append("</tr>");
                     }
                 }
