@@ -502,7 +502,7 @@ namespace CSRMS.Models.DatabaseInterface
                                     DateTime time = (DateTime)reader3["time"];
                                     string reminderMethod = reader3["ReminderMethod"].ToString();
                                     // Create a new Reminder object
-                                    Reminder reminder = new Reminder(reminderId, taskId, msg, time, reminderMethod);
+                                    Reminder reminder = new Reminder(new EmailReminderImplementation(),reminderId, taskId, msg, time, reminderMethod);
                                     task.GetReminders().Add(reminder);
                                 }
                             }

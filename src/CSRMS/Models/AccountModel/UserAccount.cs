@@ -169,6 +169,11 @@ namespace CSRMS.Models.AccountModel
             HttpContext.Current.Session["UserAccount"] = DatabaseInterface.DatabaseInterface.GetUserAccount(this.emailAddress);
         }
 
+        public static void deleteReminder(int reminder_id)
+        {
+            DatabaseInterface.DatabaseInterface.DeleteReminder(reminder_id);
+        }
+
         public void resetUserTasksData()
         {
             HttpContext.Current.Session["UserTasks"] = DatabaseInterface.DatabaseInterface.GetAllUserAccountTasks(this.emailAddress);

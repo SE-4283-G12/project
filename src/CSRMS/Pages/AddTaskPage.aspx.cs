@@ -155,12 +155,13 @@ namespace CSRMS.Pages
                 }
                 if (areRemindersEnabledSelected)
                 {
-                    int taskId = -1;
                     Task userTask = new Task();
+                    ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
                     foreach (Models.EventModel.Task task in (HttpContext.Current.Session["UserTasks"] as List<Models.EventModel.Task>))
                     {
                         if (taskName == task.GetTitle())
                         {
+
                             userTask = task; break;
                         }
 
@@ -184,7 +185,7 @@ namespace CSRMS.Pages
                                 // Handle unrecognized reminder
                                 break;
                         }
-                        ((UserAccount)HttpContext.Current.Session["UserAccount"]).addReminderToUserAccountTask(taskId, taskname.Text, dueDate, timeOfReminder);
+                        ((UserAccount)HttpContext.Current.Session["UserAccount"]).addReminderToUserAccountTask(userTask.GetTaskId(), taskname.Text, dueDate, timeOfReminder);
                         ((UserAccount)HttpContext.Current.Session["UserAccount"]).resetUserTasksData();
                     }
                 }
